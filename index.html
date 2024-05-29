@@ -106,17 +106,15 @@
     style="display: block; margin: 0px; height: auto; padding: 20px; box-sizing: border-box; width: 100%; background-color: white; background-image: url('images/Background+Wave+Right.jpg'); background-size: cover; background-position: center;"
     id="doctor3">
     <div class="container" style="max-width: 1400px; margin: 0 auto;">
-        <div class="rozi-about"
-            style="display: flex; flex-direction: row; align-items: center; text-align: left; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px;">
-            <div class="about-rozi-content-left" style="flex: 1; display: flex; justify-content: center; padding: 20px;">
+        <div class="rozi-about">
+            <div class="about-rozi-content-left">
                 <div>
-                    <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image"
-                        style="width: 80%; max-width: 300px; height: auto; border-radius: 10px;" />
-                    <h3 style="width: 100%; margin-bottom: 20px; color: #dab968;">Meet Miss. Rozi</h3>
-                    <h2 style="color: #126796;">Founder and Co of WellvichAAr</h2>
+                    <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image" />
+                    <h3>Meet Miss. Rozi</h3>
+                    <h2>Founder and Co of WellvichAAr</h2>
                 </div>
             </div>
-            <div class="about-rozi-content" style="flex: 1; padding: 20px; text-align: left;">
+            <div class="about-rozi-content">
                 <p>
                     Rozi is a Counseling Psychologist with a postgraduate degree in
                     psychology and extensive training in guidance and counseling. As
@@ -146,7 +144,7 @@
                         your path to mental wellness.
                     </p>
                 </div>
-                <button class="show-more" style="display: none; margin-top: 20px;" onclick="toggleText()">
+                <button class="show-more" onclick="toggleText()">
                     Know More
                 </button>
             </div>
@@ -154,8 +152,48 @@
     </div>
 </section>
 
+
 <style>
-    @media (min-width: 769px) {
+ /* General styles */
+.rozi-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+}
+
+.about-rozi-content-left,
+.about-rozi-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.rozi-image {
+    width: 90%; /* Increased width to make the image larger */
+    max-width: 750px; /* Adjusted max-width */
+    height: auto;
+    border-radius: 10px;
+}
+
+h3 {
+    width: 100%;
+    /* margin-bottom: 10px; Reduced margin */
+    font-size: 1.2em; /* Reduced font size */
+    color: #dab968;
+}
+
+h2 {
+    font-size: 1.5em; /* Reduced font size */
+    color: #126796;
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
     .rozi-about {
         flex-direction: row;
     }
@@ -169,14 +207,11 @@
     }
 }
 
+/* Styles for smaller screens */
 @media (max-width: 768px) {
     .rozi-about {
         flex-direction: column;
         text-align: center;
-    }
-
-    .about-rozi-content-left {
-        margin-bottom: 20px;
     }
 
     .extra-text {
@@ -197,13 +232,6 @@
         color: #126796;
         background-color: white;
     }
-}
-
-.rozi-image {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
 }
 
 </style>
@@ -237,6 +265,9 @@
     window.addEventListener('resize', updateLayout);
     window.addEventListener('load', updateLayout);
 </script>
+
+
+
 
 
     <!-- rozi intro end -->
