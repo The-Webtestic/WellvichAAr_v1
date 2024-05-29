@@ -173,20 +173,17 @@ nav {
 
 
 /* HERO */
-
-
 .hero {
     background-color: #f3f1e7;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     padding: 0 5%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .hero-content {
-    flex: 1 1 600px; 
-    /* text-align: center; */
+    flex: 1 1 600px;
     padding: 20px;
 }
 
@@ -198,11 +195,10 @@ nav {
 
 .hero-content h1 {
     color: #126796;
-    font-family: 'Century Gothic', sans-serif; 
+    font-family: 'Century Gothic', sans-serif;
     font-size: 36px;
     margin-bottom: 20px;
 }
-
 
 .hero-content button {
     background-color: #045D64;
@@ -211,52 +207,63 @@ nav {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .hero-content button:hover {
     background-color: #f3f1e7;
     color: #000;
-    border: 1px solid #126796; 
+    border: 1px solid #126796;
 }
 
 .hero-image {
-    margin-top: 105px;
-    flex: 1 1 600px; 
-    /* padding: 10px; */
-    text-align: center; 
+    flex: 1 1 600px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .hero-image img {
-    background-size: auto;
-    height: 80vh;
-    width: auto;
+    max-width: 100%;
+    height: auto;
 }
-
-
 
 /* Responsive styling */
-
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; 
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-content, .hero-image {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
     }
 
-    .hero-content, .hero-image {
-        flex: 1 1 100%; 
-    }
     .hero-image {
-        margin-top: 45px;
+        margin-top: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h3 {
+        font-size: 16px;
     }
 }
 
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
 
+    .hero-content h3 {
+        font-size: 14px;
+    }
 
-/* END HERO */
+    .hero-image {
+        margin-top: 15px;
+    }
+}
 
 
 
