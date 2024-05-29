@@ -14,39 +14,36 @@
     <nav>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navLinks = document.querySelector(".nav-links");
 
-            menuToggle.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
+                menuToggle.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
             });
-    });
         </script>
-        
-            <div class="nav-container">
-                <div class="logo">
-                    <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
-                </div>
-                <div class="menu-toggle">
-                    <span>&#9776;</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li class="dropdown">
-                        <a href="#team">Our Team</a>
-                        <ul class="dropdown-content">
-                            <li class="dropdown">
-                                <ul class="dropdown-content">
-                                    <li><a href="#doctor2">Clinical Psychologists</a></li>
-                                    <li><a href="#doctor3">Counseling Psychologists1</a></li>
-                                    <li><a href="#doctor1">Counseling Psychologists2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#specializations">Specializations</a></li>
+
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <span>&#9776;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#team">Our Team</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html#doctor2">Clinical Psychologists</a></li>
+                        <li><a href="index.html#doctor3">Counseling Psychologists1</a></li>
+                        <li><a href="index.html#doctor1">Counseling Psychologists2</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#specializations">Specializations</a></li>
+                <div class="social-media-links">
                     <li>
                         <a href="https://www.facebook.com" target="_blank">
                             <i style="color: white; background-color: #00616f; border-radius: 50%; padding: 15px;"
@@ -65,10 +62,12 @@
                                 class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <li><a href="contact.html" style="color: white;" onmouseover="this.style.color='#00616f'" onmouseout="this.style.color='white'" class="contact-button">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
+                </div>
+                <li><a href="contact.html" style="color: white;" onmouseover="this.style.color='#00616f'"
+                        onmouseout="this.style.color='white'" class="contact-button">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 
         <!-- Hero start  -->
 
