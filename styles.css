@@ -55,7 +55,7 @@ nav {
 }
 
 .contact-button {
-    background-color: #00616f;
+    background-color: #126796;
     padding: 10px 5px;
     border: none;
     border-radius: 5px;
@@ -66,15 +66,15 @@ nav {
 
 .contact-button:hover {
     background-color: #f3f1e7;
-    border: solid 1px #00616f;
-    color: #00616f;
+    border: solid 1px #126796;
+    color: #126796;
 }
 
 .menu-toggle {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: #00616f;
+    color: #126796;
 }
 
 .dropdown-content {
@@ -99,7 +99,7 @@ nav {
     text-decoration: none;
     display: block;
     text-align: left;
-    background-color: #00616f;
+    background-color: #126796;
 }
 
 .dropdown:hover .dropdown-content {
@@ -197,7 +197,7 @@ nav {
 }
 
 .hero-content h1 {
-    color: #00616f;
+    color: #126796;
     font-family: 'Century Gothic', sans-serif; 
     font-size: 36px;
     margin-bottom: 20px;
@@ -217,7 +217,7 @@ nav {
 .hero-content button:hover {
     background-color: #f3f1e7;
     color: #000;
-    border: 1px solid #00616f; 
+    border: 1px solid #126796; 
 }
 
 .hero-image {
@@ -305,7 +305,7 @@ nav {
 
 .aboutus-section {
     min-height: 490px;
-    background-color: #00616f;
+    background-color: #126796;
     color: white;
     display: flex;
     align-items: center;
@@ -354,7 +354,7 @@ nav {
 }
 
 .aboutus-content button:hover {
-    background-color: #00616f;
+    background-color: #126796;
     border-radius: 5px;
     color: #ffffff;
     border: solid 1px #ffffff;
@@ -370,7 +370,7 @@ nav {
 /* footer start */
 
 footer {
-    background-color: #00616f;
+    background-color: #126796;
     color: #F8BF7D;
     text-align: center;
     padding: 20px 0;
