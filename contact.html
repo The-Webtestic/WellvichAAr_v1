@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-WellvichAAr</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navLinks = document.querySelector(".nav-links");
+
+                menuToggle.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
+            });
+
+        </script>
+        <div class="nav-container" style="display: flex; justify-content: space-between; margin-bottom: auto;">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <span>&#9776;</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#team">Our Team</a>
+                    <ul class="dropdown-content">
+                        <li class="dropdown">
+                            <ul class="dropdown-content">
+                                <li><a href="index.html#doctor2">Clinical Psychologists</a></li>
+                                <li><a href="index.html#doctor3">Counseling Psychologists1</a></li>
+                                <li><a href="index.html#doctor1">Counseling Psychologists2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li><a href="">Our Team</a></li> -->
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#specializations">Specializations</a></li>
+                <!-- <li><a href="#faqs">FAQs</a></li> -->
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i style="color: white; background-color: #00616f; border-radius: 50%; padding: 15px;"
+                            class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i style="color: white; background-color: #00616f; border-radius: 50%; padding: 15px;"
+                            class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i style="color: white; background-color: #00616f; border-radius: 50%; padding: 15px;"
+                            class="fab fa-twitter"></i>
+                    </a>
+                </li>
+
+                <li><a href="contact.html" style="color: white;" onmouseover="this.style.color='#00616f'"
+                        onmouseout="this.style.color='white'" class="contact-button">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+     <!-- Hero start  -->
+
+     <section class="hero">
+        <div class="hero-content">
+            <h2>CONTACT US</h2>
+            <h1>Start Your Healing Journey.</h1>
+            <p>Discover the transformative power of positive psychology, hypnotherapy, and evidence-based therapies tailored to your unique needs. Let us be your partners in growth, your champions of resilience, and your guides to a brighter, more fulfilling tomorrow.</p>
+            <a href="contact.html" style="color: white;" onmouseover="this.style.color='#00616f'"
+               onmouseout="this.style.color='white'" class="contact-button">Contact Us</a>
+        </div>
+        <div class="hero-image">
+            <img src="./images/IMG_20240116_000031_474 (1).jpg" alt="Therapist with client">
+        </div>
+    </section>
+
+<!--  Hero  end -->
+
+
+    <!-- contact us start-->
+
+<style>
+    .contact-section {
+    background-color: #00616F;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    color: #dab968;
+    margin-bottom: 20px;
+}
+
+.contact-section h2, 
+.contact-section h3, 
+.contact-section .contact-button {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-section .contact-button {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid white;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.contact-section .contact-button:hover {
+    color: #00616F;
+    background-color: white;
+    border-color: #00616F;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .contact-section h1 {
+        font-size: 24px;
+    }
+
+    .contact-section h2 {
+        font-size: 18px;
+    }
+
+    .contact-section h3 {
+        font-size: 16px;
+    }
+
+    .contact-section .contact-button {
+        padding: 8px 16px;
+    }
+}
+
+</style>
+
+
+
+<section class="contact-section">
+    <h2>GET IN TOUCH</h2>
+    <h1>Contact Information.</h1>
+    <h3>Email: wellvichaar@gmail.Com</h3>
+    <h3>Phone: +91 85958 71247</h3>
+    <a href="contact.html" class="contact-button">Contact Us</a>
+</section>
+
+<!-- contact us end -->
+
+
+
+
+    <!-- contact form start -->
+
+    <style>
+        .contact-form {
+            background-image: url("images/Background+Wave+Left.jpg"); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2, p {
+            text-align: center;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #dab968;
+        }
+        h1 {
+            color: #00616F;
+        }
+        p {
+            color: #333;
+            max-width: 550px;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #f3f1e7;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+        }
+        input[type="submit"] {
+            background-color: #00616f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d56;
+        }
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+    
+    <section class="contact-form">
+        <h2>GET STARTED</h2><br>
+        <h1>Start Your Journey.</h1><br>
+        <p>Start your mental health transformation today by reaching out. You deserve to live a life that’s filled with peace and fulfillment. Take the first step by filling out this form.</p>
+        <form id="contact-form" action="">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+            
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <div class="checkbox-group">
+                <label>What Service Are You Interested In?</label>
+                <label><input type="checkbox" name="service" value="Mental Health Counseling"> Mental Health Counseling</label>
+                <label><input type="checkbox" name="service" value="Virtual Sessions"> Virtual Sessions</label>
+                <label><input type="checkbox" name="service" value="Group Therapy"> Group Therapy</label>
+                <label><input type="checkbox" name="service" value="I Just Have a Question"> I Just Have a Question</label>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Get form data
+                const formData = new FormData(this);
+        
+                // Get first name and last name for subject
+                const firstName = formData.get('first-name');
+                const lastName = formData.get('last-name');
+        
+                // Construct email body
+                let emailBody = `Name: ${firstName} ${lastName}\n`;
+                formData.forEach(function(value, key) {
+                    if (key !== 'first-name' && key !== 'last-name') {
+                        emailBody += `${key}: ${value}\n`;
+                    }
+                });
+        
+                // Construct mailto link
+                const subject = `New Contact Form Submission By ${firstName} ${lastName}`;
+                const emailAddress = 'wellvichaar@gmail.com';
+                const mailtoLink = 'mailto:' + encodeURIComponent(emailAddress) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
+        
+                // Open mail client with mailto link
+                window.location.href = mailtoLink;
+            });
+        </script>
+        
+        
+    </section>
+    
+
+    <!-- contact form end -->
+
+
+    <!-- footer start -->
+<footer style="background-color: #00616f; color: #F8BF7D; text-align: center; padding: 20px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="margin-bottom: 20px;">
+            <h1 style="margin: 0; font-size: 26px; color: #ffffff;">WellvichAAr</h1>
+            <p style="margin: 15px 0 2px; font-size: 18px; color: #dab969;">Certified Clinical Mental Health Counselor</p>
+        </div>
+        <div style="margin: 10px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+            <a href="index.html#about" style="color: #ffffff; text-decoration: none; margin: 5px 2px;">About us</a>
+            <p style="margin: 5px; color: #dab969;">//</p>
+            <a href="index.html#doctor2" style="color: #ffffff; text-decoration: none; margin: 5px 2px;">Team</a>
+            <p style="margin: 5px; color: #dab969;">//</p>
+            <a href="index.html#specializations" style="color: #ffffff; text-decoration: none; margin: 5px 2px;">Specializations</a>
+            <p style="margin: 5px; color: #dab969;">//</p>
+            <a href="index.html#services" style="color: #ffffff; text-decoration: none; margin: 5px 2px;">Services</a>
+            <p style="margin: 5px; color: #dab969;">//</p>
+            <a href="contact.html" style="color: #ffffff; text-decoration: none; margin: 5px 2px;">Contact</a>
+        </div>
+        <div style="margin: 10px 0;">
+            <a href="#" aria-label="Facebook" style="margin: 0 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.655-4.785 1.323 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.309h3.588l-.467 3.622h-3.121v9.293h6.116c.731 0 1.324-.593 1.324-1.324v-21.35c0-.732-.593-1.325-1.324-1.325z" />
+                </svg>
+            </a>
+            <a href="#" aria-label="Instagram" style="margin: 0 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.241 1.308 3.607.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.241 1.245-3.607 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.241-1.308-3.607-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.063-1.366.333-2.633 1.308-3.608.975-.975 2.241-1.245 3.607-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.013-4.947.072-1.421.065-2.687.333-3.75 1.396-1.064 1.064-1.331 2.33-1.396 3.75-.059 1.28-.072 1.688-.072 4.947s.013 3.667.072 4.947c.065 1.421.333 2.687 1.396 3.75 1.064 1.064 2.33 1.331 3.75 1.396 1.28.059 1.688.072 4.947.072s3.667-.013 4.947-.072c1.421-.065 2.687-.333 3.75-1.396 1.064-1.064 1.331-2.33 1.396-3.75.059-1.28.072-1.688.072-4.947s-.013-3.667-.072-4.947c-.065-1.421-.333-2.687-1.396-3.75-1.064-1.064-2.33-1.331-3.75-1.396-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
+                </svg>
+            </a>
+            <a href="#" aria-label="Twitter" style="margin: 0 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.723 0-4.932 2.208-4.932 4.93 0 .386.044.763.127 1.124-4.096-.205-7.725-2.167-10.15-5.144-.424.724-.667 1.562-.667 2.457 0 1.694.863 3.188 2.175 4.066-.803-.026-1.56-.246-2.224-.616v.062c0 2.366 1.683 4.343 3.918 4.792-.41.111-.842.171-1.287.171-.315 0-.622-.03-.921-.086.623 1.944 2.432 3.357 4.576 3.395-1.675 1.312-3.784 2.096-6.075 2.096-.394 0-.779-.023-1.161-.068 2.165 1.388 4.735 2.2 7.504 2.2 9.005 0 13.928-7.465 13.928-13.928 0-.212-.004-.423-.014-.634.955-.69 1.784-1.55 2.437-2.532z" />
+                </svg>
+            </a>
+        </div>
+        <div style="margin: 5px 0;">
+            <p style="margin:5px 0; color: #dab968;">&copy; 2024 WellvichAAr All Rights Reserved. Design By <a style="color: #dab968;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'" href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a></p>
+            <p style="margin: 10px 0;"><a href="privacy-policy.html#privacy" style="color: #ffffff; text-decoration: none;">PRIVACY POLICY </a> &bull; <a href="privacy-policy.html#terms" style="color: #ffffff; text-decoration: none;">TERMS AND CONDITIONS</a></p>
+        </div>
+    </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+
+
+
+</body>
+</html>
