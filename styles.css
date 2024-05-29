@@ -268,47 +268,7 @@ nav {
 
 
 
-/* about us start */ 
-
-
-/* Responsive styling */
-
-@media (max-width: 768px) {
-
-
-    .aboutus-content {
-        max-width: 1200px;
-        text-align: center;
-    }
-    
-    
-    
-    .aboutus-content h2 {
-        font-size: 22px;
-        color: #ffffff;
-    }
-    
-    .aboutus-content h1 {
-        color: #dab968;
-        font-size: 28px;
-        margin: 4px 0;
-    }
-    
-    
-    
-    .aboutus-content p {
-        text-align: start;
-        white-space: pre-wrap;
-        transition-timing-function: ease;
-        transition-duration: 1.5s;
-        transition-delay: 0.12093s;
-        font-size: 14px;
-        line-height: 15px;
-        color: #b2dfdb;
-        margin-bottom: 20px;
-    }
-}
-
+/* about us start */
 
 .aboutus-section {
     min-height: 490px;
@@ -318,16 +278,19 @@ nav {
     align-items: center;
     justify-content: center;
     font-family: "Gothic A1", sans-serif;
+    padding: 20px;
 }
-.aboutus-content {
+
+.aboutus-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
     max-width: 1200px;
-    text-align: center;
+    width: 100%;
 }
 
-
-.aboutus-content h2 {
-    font-size: 25px;
-    color: #ffffff;
+.aboutus-content {
+    text-align: center;
 }
 
 .aboutus-content h1 {
@@ -336,7 +299,10 @@ nav {
     margin: 5px 0;
 }
 
-
+.aboutus-content h2 {
+    font-size: 25px;
+    color: #ffffff;
+}
 
 .aboutus-content p {
     text-align: center;
@@ -367,8 +333,29 @@ nav {
     border: solid 1px #ffffff;
 }
 
+/* Responsive styling */
+@media (max-width: 768px) {
+    .aboutus-content h1 {
+        font-size: 28px;
+        margin: 4px 0;
+    }
+
+    .aboutus-content h2 {
+        font-size: 22px;
+        color: #ffffff;
+    }
+
+    .aboutus-content p {
+        text-align: start;
+        font-size: 14px;
+        line-height: 20px;
+        color: #b2dfdb;
+        margin-bottom: 20px;
+    }
+}
 
 /* end about us */
+
 
 
 
