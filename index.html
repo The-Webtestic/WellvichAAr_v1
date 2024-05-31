@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <title>WellvichAAr</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +22,14 @@
 
     <!-- nav bar start -->
     <style>
+        body {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0;
+            background-color: #f3f1e7;
+            overflow-x: hidden;
+
+        }
+
         .nav-container {
             display: flex;
             align-items: center;
@@ -28,6 +38,7 @@
             background-color: #f3f1e7;
             color: #126796;
             font-weight: bold;
+            overflow-x: hidden;
         }
 
         .nav-container .logo img {
@@ -228,12 +239,14 @@
             align-items: center;
             padding: 0px 0px 0px 0px;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         .hero-content {
             width: 50%;
         }
-        .hero-content{
+
+        .hero-content {
             padding: 0px 40px;
         }
 
@@ -310,7 +323,7 @@
 
             .hero-image img,
             .rozi-name {
-                width: 100%;
+                width: 85%;
             }
         }
 
@@ -327,7 +340,8 @@
     <section class="hero">
         <div class="hero-content">
             <h1 style="font-size: 36px;">Welcome To WellvichAAr</h1>
-            <h2 style="color: #dab968; font-size: 26px;">At Well Vichaar, our uniqueness lies in our empathetic and holistic approach to mental wellness.</h2>
+            <h2 style="color: #dab968; font-size: 26px;">At Well Vichaar, our uniqueness lies in our empathetic and
+                holistic approach to mental wellness.</h2>
             <a href="counselling.html" class="contact-button" style="font-weight: bold;">Counselling Start</a>
         </div>
         <div class="hero-image">
@@ -1108,13 +1122,18 @@
         <h2 style="font-size: 26px; color: #dab968;">Book A Session</h2>
         <h3 style="color: white;"><del>₹ 2,999/-</del></h3>
         <h2 style="color: #dab968; font-size: 26px;">₹ 1,500/-</h2>
-        <p style="color: white; font-weight: bold;"><i class="far fa-check-circle" style="color: #dab968;"></i> No. of Sessions : 1</p>
-        <p style="color: white; font-weight: bold;"><i class="far fa-clock" style="color: #dab968;"></i></i> Session Duration : 60 minutes
+        <p style="color: white; font-weight: bold;"><i class="far fa-check-circle" style="color: #dab968;"></i> No. of
+            Sessions : 1</p>
+        <p style="color: white; font-weight: bold;"><i class="far fa-clock" style="color: #dab968;"></i></i> Session
+            Duration : 60 minutes
         </p>
-        <p style="color: white; font-weight: bold;"><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i> Mode: Video or Audio
+        <p style="color: white; font-weight: bold;"><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i>
+            Mode: Video or Audio
         </p>
-        <p style="color: white; font-weight: bold;"><i class="fas fa-shield-alt" style="color: #dab968" ></i> Completely Confidential</p>
-        <a href="counselling.html" class="book-button" style="font-weight: bold;"><i class="fas fa-hand-holding-heart" style="color: #dab968; "></i>
+        <p style="color: white; font-weight: bold;"><i class="fas fa-shield-alt" style="color: #dab968"></i> Completely
+            Confidential</p>
+        <a href="counselling.html" class="book-button" style="font-weight: bold;"><i class="fas fa-hand-holding-heart"
+                style="color: #dab968; "></i>
             Start
             Counselling</a>
 
@@ -1331,19 +1350,22 @@
                 <div class="icon-container">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <p style="font-size: 15px;">01</p><p style="font-size: 22px; font-weight: bold;">Enrol for the Session</p>
+                <p style="font-size: 15px;">01</p>
+                <p style="font-size: 22px; font-weight: bold;">Enrol for the Session</p>
             </div>
             <div class="step">
                 <div class="icon-container">
                     <i class="fas fa-calendar-check"></i>
                 </div>
-                <p style="font-size: 15px;">02</p><p style="font-size: 22px; font-weight: bold;">Schedule appointment</p>
+                <p style="font-size: 15px;">02</p>
+                <p style="font-size: 22px; font-weight: bold;">Schedule appointment</p>
             </div>
             <div class="step">
                 <div class="icon-container">
                     <i class="fas fa-video"></i>
                 </div>
-                <p style="font-size: 15px;">03</p><p style="font-size: 22px; font-weight: bold;">Join the call at the scheduled time.</p>
+                <p style="font-size: 15px;">03</p>
+                <p style="font-size: 22px; font-weight: bold;">Join the call at the scheduled time.</p>
             </div>
         </div>
     </section>
@@ -1762,6 +1784,83 @@
 
 
     <!-- footer start -->
+    <style>
+        footer {
+            background-color: #126796;
+            color: #F8BF7D;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        .footer-logo p {
+            margin: 15px 0 20px;
+            font-size: 18px;
+            color: #dab969;
+        }
+
+
+        .footer-nav {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-nav p {
+            margin: 5px;
+            text-decoration: none;
+            color: #dab969;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin: 20px 0;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+        }
+
+        .footer-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-bottom p {
+            margin: 10px 0;
+        }
+
+        .footer-bottom a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -1780,7 +1879,7 @@
                 <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
             </div>
             <div class="footer-social">
-                <a href="#" aria-label="Facebook" >
+                <a href="#" aria-label="Facebook">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                         <path
                             d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.655-4.785 1.323 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.309h3.588l-.467 3.622h-3.121v9.293h6.116c.731 0 1.324-.593 1.324-1.324v-21.35c0-.732-.593-1.325-1.324-1.325z" />
@@ -1800,8 +1899,9 @@
                 </a>
             </div>
             <div class="footer-bottom">
-                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;"
-                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'"
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a
+                        style="color: #dab968;" onmouseover="this.style.color='white'"
+                        onmouseout="this.style.color='#dab968'"
                         href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a>
                 </p>
                 <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
