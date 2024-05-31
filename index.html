@@ -70,7 +70,8 @@
         }
 
         .nav-links :hover {
-            text-decoration: underline 8px #dab968;
+            /* text-decoration: underline 8px #dab968; */
+            color: #126796;
         }
 
         .menu-toggle {
@@ -81,40 +82,6 @@
         .menu-toggle span {
             font-size: 24px;
             color: #126796;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #126796;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .dropdown-content a:hover {
-            color: #126796;
-            ;
-            font-weight: bold;
-        }
-
-        .dropdown-content li {
-            list-style-type: none;
-            color: #126796;
-        }
-
-        .dropdown-content li a {
-            padding: 12px 16px;
-            display: block;
-            text-decoration: none;
-            color: #126796;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         .social-media-links a:hover i {
@@ -181,8 +148,7 @@
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
 
-            .nav-links,
-            .dropdown-content {
+            .nav-links {
                 display: none;
                 /* Initially hide */
                 flex-direction: column;
@@ -197,7 +163,22 @@
 
             .nav-links.active {
                 display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                /* Full screen height */
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: white;
+                z-index: 10;
+                /* Make sure it's above other content */
+                padding-top: 20px;
+                /* Space from the top */
+                align-items: center;
+                /* Center align the links */
             }
+
 
             .menu-toggle {
                 display: block;
@@ -225,12 +206,32 @@
                 const menuToggle = document.querySelector(".menu-toggle");
                 const navLinks = document.querySelector(".nav-links");
 
-                menuToggle.addEventListener("click", function () {
+                // Function to toggle navigation
+                function toggleNav() {
                     navLinks.classList.toggle("active");
+                }
+
+                // Toggle nav on menu button click
+                menuToggle.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Prevent click from immediately propagating to document
+                    toggleNav();
+                });
+
+                // Close nav when clicking outside of nav
+                document.addEventListener('click', function (event) {
+                    if (!menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+
+                // Close nav when a link is clicked
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
                 });
             });
         </script>
-
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
@@ -243,10 +244,6 @@
                 <a href="#about">About</a>
                 <div class="dropdown">
                     <a href="counselling.html#team">Our Team</a>
-                    <ul class="dropdown-content">
-                        <li><a href="counselling.html#Clinical Psychologist">Clinical Psychologists</a></li>
-                        <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
-                    </ul>
                 </div>
                 <a href="#services">Services</a>
                 <a href="#specializations">Specializations</a>
@@ -286,7 +283,7 @@
 
         .hero-content {
             width: 50%;
-            padding: 0px 40px;
+            padding: 0 10px 0px 120px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -338,12 +335,13 @@
         }
 
         .rozi-name {
-            background-color: #D2D2D0;
+            background-color: #126796;
             color: white;
             text-align: center;
             padding: 20px;
             width: 80%;
             margin-top: 0;
+            margin-bottom: 25px;
             /* Ensure no top margin */
         }
 
@@ -355,28 +353,39 @@
 
             .hero-content,
             .hero-image {
-                width: 100%;
+                width: 80%;
+                padding: 20px 20px;
+                /* Add horizontal padding */
             }
 
             .hero-content h1 {
                 font-size: 32px;
-                padding-left: 15px;
+                /* Adjust if necessary */
+                text-align: center;
             }
 
             .hero-content h2 {
                 font-size: 16px;
-                padding-left: 15px;
+                /* Adjust if necessary */
+                text-align: center;
             }
 
             .hero-content a {
                 font-size: 16px;
                 padding: 8px 16px;
-                margin-left: 15px;
+                display: block;
+                /* Make the link take the full width */
+                text-align: center;
+                /* Center the text in the button */
+                margin: 10px auto;
+                /* Center the button horizontally */
             }
 
             .hero-image img,
             .rozi-name {
                 width: 85%;
+                margin: 0 auto;
+                /* Center these elements */
             }
         }
 
@@ -386,6 +395,11 @@
             .hero-content h2,
             .hero-content a {
                 font-size: 16px;
+                /* Adjust if necessary */
+                padding: 0 10px;
+                /* Adjust padding for smaller screens */
+                text-align: center;
+                /* Ensure text alignment is centered */
             }
 
             .hero-content h2 {
@@ -404,7 +418,7 @@
             <a href="counselling.html" class="contact-button" style="font-weight: bold;">Counselling Start</a>
         </div>
         <div class="hero-image">
-            <img src="images/rozi-removebg-preview.png" alt="Rozi's Image" class="rozi-image">
+            <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image">
             <div class="rozi-name">
                 <h1 style="color: black;">Meet Miss. Rozi</h1>
                 <h2 style="color: #dab968;">Founder and CEO of WellvichAAr</h2>
@@ -418,80 +432,62 @@
 
 
     <!-- about us start -->
-
     <style>
         .aboutus-section {
-            min-height: 350px;
+            min-height: 300px;
             background-color: #126796;
             color: white;
             display: flex;
             justify-content: center;
+            align-items: center;
+            /* Center content vertically */
             font-family: "Gothic A1", sans-serif;
-            padding: 20px;
+            /* padding: 40px 20px; */
+            /* Responsive padding */
         }
 
         .aboutus-container {
-            padding: 20px;
-            border-radius: 10px;
             max-width: 1200px;
-            width: 100%;
+            width: 90%;
+            /* More flexible width */
+            padding: 20px;
+            /* Added padding for spacing */
+            border-radius: 10px;
+            box-sizing: border-box;
+            /* Include padding and border in the width */
         }
 
         .aboutus-content {
             text-align: center;
         }
 
-        .aboutus-content h1 {
+        .aboutus-content h1,
+        .aboutus-content h2 {
             color: #dab968;
-            font-size: 37px;
-            margin: 0 0 20px 0;
+            margin-bottom: 20px;
+            /* Consistent margin for spacing */
         }
 
         .aboutus-content h2 {
-            font-size: 25px;
-            color: #ffffff;
-            margin-bottom: 10px;
+            font-size: 26px;
+            /* Standard size, adjust if needed */
         }
 
         .aboutus-content p {
             text-align: justify;
-            white-space: normal;
             font-size: 18px;
             line-height: 1.6;
-            color: #b2dfdb;
-            margin-bottom: 0;
-            /* Reduced to 0 to remove extra padding below the text */
+            margin-bottom: 20px;
+            /* Add bottom margin for spacing */
             transition: color 0.3s ease;
         }
 
-        .aboutus-content button {
-            background-color: #ffffff;
-            font-size: 16px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .aboutus-content button:hover {
-            background-color: #126796;
-            color: #ffffff;
-            border: 1px solid #ffffff;
-        }
-
         @media (max-width: 768px) {
-            .aboutus-section {
-                padding: 10px;
-            }
-
-            .aboutus-container {
-                padding: 15px;
-            }
 
             .aboutus-content h1,
             .aboutus-content h2 {
                 font-size: 22px;
+                /* Adjusted for smaller screens */
             }
 
             .aboutus-content p {
@@ -499,19 +495,35 @@
                 line-height: 1.4;
             }
         }
+
+        @media (max-width: 480px) {
+
+            .aboutus-content h1,
+            .aboutus-content h2 {
+                font-size: 20px;
+                /* Smaller font size for very small screens */
+            }
+
+            .aboutus-content p {
+                font-size: 14px;
+                /* Smaller font size for better readability */
+            }
+        }
     </style>
+
     <section id="about" class="aboutus-section">
         <div class="aboutus-container">
             <div class="aboutus-content">
-                <h2 style="color: #dab968; font-size: 26px;">About Us</h2>
-                <p style="font-weight: bold;">At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led
-                    by a compassionate team of RCI Certified Clinical psychologists, counseling psychologists, and
-                    top-tier psychiatrists, we offer a haven for those seeking clarity, healing, and renewal.Let us be
-                    your partners in growth, your champions of resilience, and your guides to a brighter, more
-                    fulfilling tomorrow.Choose WellvichAAr—the right place for your journey to well-being.</p>
+                <h2>About Us</h2>
+                <p>At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led by a compassionate team of
+                    RCI Certified Clinical psychologists, counseling psychologists, and top-tier psychiatrists, we offer
+                    a haven for those seeking clarity, healing, and renewal. Let us be your partners in growth, your
+                    champions of resilience, and your guides to a brighter, more fulfilling tomorrow. Choose
+                    WellvichAAr—the right place for your journey to well-being.</p>
             </div>
         </div>
     </section>
+
 
     <!-- about us end -->
 
@@ -921,43 +933,37 @@
     <style>
         .services-section {
             text-align: center;
-            background-color: #fff;
-            padding: 120px 250px;
-            /* Large screens padding */
+            background-color: white;
+            padding: 120px 150px;
+            /* Reduced horizontal padding */
         }
-    
-        .services-section h1,
-        .services-section h2 {
-            color: #126796;
-            margin-bottom: 20px;
-        }
-    
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            /* Six cards per row on full size screens */
+            /* Maintain six cards per row on large screens */
             gap: 20px;
             padding: 20px;
         }
-    
+
         .service-item {
             border: 2px solid #c2c2c2;
             padding: 10px;
-            /* Aesthetic padding */
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
         }
-    
+
         .service-item img {
             width: 100%;
-            height: 200px;
-            /* Fixed height for images */
+            height: auto;
+            /* Change to auto for maintaining aspect ratio */
             object-fit: cover;
+            /* Cover to ensure the image covers the area */
         }
-    
+
         .service-item h2 {
             background-color: #f3f3f3;
             margin: 0;
@@ -968,93 +974,64 @@
             justify-content: center;
             font-size: 16px;
         }
-    
-        .services-section a {
-            display: inline-block;
-            margin-top: 20px;
-            color: #126796;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    
-        /* Medium Screens: 1200px and below */
+
         @media (max-width: 1200px) {
             .services-section {
-                padding: 100px 150px;
-                /* Moderately reduced padding for medium screens */
+                padding: 100px 100px;
+                /* Further reduced padding for medium screens */
             }
-    
+
             .services-grid {
                 grid-template-columns: repeat(4, 1fr);
                 /* Four cards per row */
             }
         }
-    
-        /* Small Screens: 768px and below */
+
         @media (max-width: 768px) {
             .services-section {
-                padding: 80px 100px;
+                padding: 80px 50px;
                 /* Further reduced padding for small screens */
             }
-    
+
             .services-grid {
                 grid-template-columns: repeat(3, 1fr);
                 /* Three cards per row */
             }
-    
-            .service-item img {
-                height: 150px;
-                /* Reduced height for small screens */
-            }
         }
-    
-        /* Very Small Screens: 600px and below */
+
         @media (max-width: 600px) {
             .services-section {
-                padding: 60px 50px;
-                /* Small padding for very small screens */
+                padding: 60px 30px;
+                /* Reduced padding for very small screens */
             }
-    
+
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
                 /* Two cards per row */
             }
-    
-            .service-item img {
-                height: 120px;
-                /* Further reduced height for very small screens */
-            }
         }
-    
-        /* Extra Small Screens: 480px and below */
+
         @media (max-width: 480px) {
             .services-section {
                 padding: 40px 20px;
                 /* Minimal padding for extra small screens */
             }
-    
+
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
                 /* Adjust to keep two cards in a row */
             }
-    
-            .service-item img {
-                height: 100px;
-                /* Reduced height for extra small screens */
-            }
         }
     </style>
-    
+
+
 
 
     <section class="services-section" id="services">
         <h2 style="color: #dab968;">Our Services</h2>
-        <h1>What I can help you with</h1>
+        <h1 style="color: #126796;">How We Can Help You</h1>
+        <a href="counselling.html" style="color:#126796; display: flex; align-items: start; font-weight: bold;">Let's
+            Find Out What Are You Struggling With →</a>
         <div class="services-grid">
             <div class="service-item">
                 <img src="images/images (1).jpeg" alt="Stress Management">
@@ -1115,7 +1092,6 @@
             </div>
 
         </div>
-        <a href="counselling.html">Let's Find Out What Are You Struggling With →</a>
     </section>
 
 
@@ -1249,7 +1225,7 @@
             }
 
             .book-card {
-                width: 100%;
+                width: 90%;
             }
 
             .book-card h1 {
@@ -1278,7 +1254,7 @@
             <h1 style="font-size: 36px;">Start Your Journey</h1>
             <h2 style="font-size: 26px;">Book A Session</h2>
             <h3><del>₹ 2,999/-</del></h3>
-            <h2 style="color: #dab968; font-size: 26px;">₹ 1,700/-</h2>
+            <h2 style="color: #dab968; font-size: 26px;">₹ 1,500/-</h2>
             <p><i class="far fa-check-circle" style="color: #dab968;"></i> No. of Sessions : 1</p>
             <p><i class="far fa-clock" style="color: #dab968;"></i> Session Duration : 50 minutes</p>
             <p><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i> Mode: Video or Audio</p>
@@ -1294,14 +1270,13 @@
 
 
     <!-- What Makes us Unique? start -->
-
     <style>
         .unique-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 50px;
-            background-color: #f3f1e7;
+            background-color: white;
             color: #126796;
         }
 
@@ -1327,7 +1302,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Aligns items centrally in the column */
+            /* Ensures icon is above text */
         }
 
         .icon-item p {
@@ -1340,11 +1315,11 @@
         .icon-item i {
             font-size: 39px;
             /* Default icon size */
-            color: white;
             padding: 12px;
             border-radius: 18px;
-            background-color: #dab968;
             transition: background-color 0.3s, color 0.3s;
+            display: block;
+            /* Ensure the icon behaves as a block for alignment */
         }
 
         .icon-item:hover i {
@@ -1375,50 +1350,95 @@
             }
 
             .icon-item {
-                width: 33.33%;
-                /* Ensures three items per row on small screens */
-                padding: 8px;
-                /* Smaller padding to fit better on small screens */
+                width: 50%;
+                /* Two icons per row, full width divided by two */
+                padding: 10px 15px;
+                /* Adjust padding to ensure there's space between items */
+                box-sizing: border-box;
+                /* Includes padding and border in the width calculation */
             }
 
             .icon-item i {
                 font-size: 24px;
-                /* Smaller icon size for smaller screens */
-                padding: 8px;
-                /* Less padding around the icon */
+                /* Adjusted icon size for smaller screens */
+                padding: 12px;
+                /* Sufficient padding to make the icon stand out */
+                margin-bottom: 8px;
+                /* Space between icon and text */
+            }
+
+            .icon-item p {
+                margin: 0;
+                /* Remove default margin */
+                font-size: 16px;
+                /* Adjust font size for better readability */
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .icon-item {
+                width: 50%;
+                /* Adjusted for two icons per row */
+                padding: 10px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                /* Ensure there's space between rows */
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                /* Sufficiently large for visibility */
+                padding: 10px;
+                /* Consistent padding around icons */
+                display: block;
+                /* Ensures the icon is a block element */
+            }
+
+            .icon-item p {
+                font-size: 14px;
+                /* Adjust font size for better fit */
+                margin-top: 5px;
+                /* Small space between icon and text for clarity */
             }
 
             .icons {
-                flex-direction: row;
+                display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-around;
+                /* Ensures that items are evenly spaced */
             }
         }
     </style>
 
-
     <section class="unique-section" id="specializations">
         <div class="unique-content">
             <h2 style="color: #dab968; font-size: 26px;">Our Specializations</h2>
-            <h1 style="font-size: 36px;">What Makes Me Unique?</h1>
+            <h1 style="font-size: 36px;">What Makes Us Unique?</h1>
             <div class="icons"> <!-- This will contain all icon items -->
                 <div class="icon-item">
-                    <p><i class="fas fa-user-shield"></i> Individual Consultation</p>
+                    <i class="fas fa-user-shield" style="color: white; background-color: #dab968;"></i>
+                    <p>Individual Consultation</p>
                 </div>
                 <div class="icon-item">
-                    <p><i class="fas fa-shield-alt"></i> Completely Confidential</p>
+                    <i class="fas fa-shield-alt" style="color: white; background-color: #dab968;"></i>
+                    <p>Completely Confidential</p>
                 </div>
                 <div class="icon-item">
-                    <p><i class="fas fa-heartbeat"></i> Personalised Approach</p>
+                    <i class="fas fa-heartbeat" style="color: white; background-color: #dab968;"></i>
+                    <p>Personalised Approach</p>
                 </div>
                 <div class="icon-item">
-                    <p><i class="fas fa-search"></i> Evidence Based Therapies</p>
+                    <i class="fas fa-search" style="color: white; background-color: #dab968;"></i>
+                    <p>Evidence Based Therapies</p>
                 </div>
                 <div class="icon-item">
-                    <p><i class="fas fa-user-md"></i> RCI certified clinical psychologist</p>
+                    <i class="fas fa-user-md" style="color: white; background-color: #dab968;"></i>
+                    <p>RCI certified clinical psychologist</p>
                 </div>
                 <div class="icon-item">
-                    <p><i class="fas fa-user-tie"></i> Top tier psychiatrist</p>
+                    <i class="fas fa-user-tie" style="color: white; background-color: #dab968;"></i>
+                    <p>Top tier psychiatrist</p>
                 </div>
             </div>
         </div>
@@ -1426,8 +1446,6 @@
             <img src="images/say-transformed_(1)-transformed.webp" alt="Therapy Session">
         </div>
     </section>
-
-
 
     <!--  What Makes us Unique? end -->
 

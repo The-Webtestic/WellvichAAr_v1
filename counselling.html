@@ -33,7 +33,7 @@
             background-color: #f3f1e7;
             color: #126796;
             font-weight: bold;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         .nav-container .logo img {
@@ -65,7 +65,8 @@
         }
 
         .nav-links :hover {
-            text-decoration: underline 8px #dab968;
+            /* text-decoration: underline 8px #dab968; */
+            color: #126796;
         }
 
         .menu-toggle {
@@ -76,40 +77,6 @@
         .menu-toggle span {
             font-size: 24px;
             color: #126796;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #126796;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .dropdown-content a:hover {
-            color: #126796;
-            ;
-            font-weight: bold;
-        }
-
-        .dropdown-content li {
-            list-style-type: none;
-            color: #126796;
-        }
-
-        .dropdown-content li a {
-            padding: 12px 16px;
-            display: block;
-            text-decoration: none;
-            color: #126796;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
 
         .social-media-links a:hover i {
@@ -176,8 +143,7 @@
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
 
-            .nav-links,
-            .dropdown-content {
+            .nav-links {
                 display: none;
                 /* Initially hide */
                 flex-direction: column;
@@ -192,7 +158,22 @@
 
             .nav-links.active {
                 display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                /* Full screen height */
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: white;
+                z-index: 10;
+                /* Make sure it's above other content */
+                padding-top: 20px;
+                /* Space from the top */
+                align-items: center;
+                /* Center align the links */
             }
+
 
             .menu-toggle {
                 display: block;
@@ -220,12 +201,32 @@
                 const menuToggle = document.querySelector(".menu-toggle");
                 const navLinks = document.querySelector(".nav-links");
 
-                menuToggle.addEventListener("click", function () {
+                // Function to toggle navigation
+                function toggleNav() {
                     navLinks.classList.toggle("active");
+                }
+
+                // Toggle nav on menu button click
+                menuToggle.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Prevent click from immediately propagating to document
+                    toggleNav();
+                });
+
+                // Close nav when clicking outside of nav
+                document.addEventListener('click', function (event) {
+                    if (!menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+
+                // Close nav when a link is clicked
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
                 });
             });
         </script>
-
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
@@ -235,16 +236,12 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="#about">About</a>
+                <a href="index.html#about">About</a>
                 <div class="dropdown">
                     <a href="counselling.html#team">Our Team</a>
-                    <ul class="dropdown-content">
-                        <li><a href="counselling.html#Clinical Psychologist">Clinical Psychologists</a></li>
-                        <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
-                    </ul>
                 </div>
-                <a href="#services">Services</a>
-                <a href="#specializations">Specializations</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#specializations">Specializations</a>
                 <div class="social-media-links">
                     <a href="https://www.facebook.com" target="_blank">
                         <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
@@ -473,7 +470,7 @@
             }
 
             .card {
-                width: 100%;
+                width: 90%;
             }
 
             .icon {
@@ -520,8 +517,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            background-color: #f3f1e7;
-            padding: 10px;
+            background-color: white;
+            padding: 50px 10px;
+            /* Added more vertical padding */
+        }
+
+        .team-title {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            /* Added padding for better spacing */
         }
 
         .team {
@@ -539,20 +544,19 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
             height: 100%;
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-            /* Added transition effects */
         }
 
         .team:hover {
             transform: translateY(-10px) scale(1.05);
-            /* Moves up and scales for 3D effect */
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-            /* Enhances shadow to give depth */
         }
 
         .team img {
-            width: 90%;
+            width: 100%;
+            /* Increased width */
             height: auto;
-            max-height: 250px;
+            max-height: 300px;
+            /* Increased max height */
             border-radius: 10px;
             margin-bottom: 15px;
         }
@@ -583,28 +587,33 @@
             .team {
                 flex: 1 1 100%;
                 width: 80%;
+                /* Adjusted for better responsiveness */
                 max-width: 350px;
+                /* Ensure consistency */
             }
 
             .team img {
                 width: 100%;
+                /* Ensure full width within card */
             }
         }
     </style>
 
+
     <section class="team-wrapper" id="team">
+        <div class="team-title">
+            <h1 style="color: #126796;">Our Team</h1>
+        </div>
         <div class="team">
-            <img src="images/Pragati.jpg" alt="Pragati Aggarwal" id="Counseling Psychologist">
+            <img src="images/Pragati.jpg" alt="Pragati Aggarwal">
             <h1>Meet Pragati Aggarwal</h1>
             <h2>Counseling Psychologist</h2>
         </div>
-
         <div class="team">
-            <img src="images/Photo (1)_page-0001 (1).jpg" alt="Prachi Mittal" id="Clinical Psychologist">
+            <img src="images/Photo (1)_page-0001 (1).jpg" alt="Prachi Mittal">
             <h1>Meet Prachi Mittal</h1>
             <h2>Clinical Psychologist</h2>
         </div>
-
         <div class="team">
             <img src="images/IMG_20240116_000031_474 (1).jpg" alt="Lorem Ipsum">
             <h1>Vaibhav Jain</h1>
@@ -614,133 +623,68 @@
 
 
 
+
     <!-- our team end -->
 
     <!-- feature start -->
-
     <style>
-        .features {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            /* Six cards per row on large screens */
-            justify-items: center;
-            gap: 20px;
-            padding: 120px 150px;
-            /* Padding for large screens */
-            background-color: white;
-            overflow: hidden;
-            width: 100%;
-        }
+        /* Base styles for the section and cards */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
 
-        .feature-card {
-            background-color: white;
-            width: 250px;
-            text-align: center;
-            padding: 50px 20px;
-            /* Padding inside the card */
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, background-color 0.3s;
-        }
+.feature-card {
+    background-color: white; /* Light grey background */
+    border: 1px solid #ccc; /* Grey border */
+    border-radius: 25px 25px 25px 25px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px); /* Subtract margin */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background-color: #f3f1e7;
-        }
+/* Icon styles */
+.feature-card .icon {
+    font-size: 24px; /* Larger icons */
+    color: #333; /* Dark grey color for icons */
+    margin-bottom: 10px; /* Space between icon and text */
+}
 
-        .icon {
-            color: #dab968;
-            font-size: 40px;
-            /* Initial icon size for large screens */
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
+/* Hover effect for cards */
+.feature-card:hover {
+    transform: translateY(-10px); /* Move the card up on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect for lifting feel */
+    border: solid 1px #dab968;
+}
+p:hover{
+    color: #dab968;
+}
+.feature-card .icon:hover{
+    color: #dab968;
+}
 
-        .icon:hover {
-            color: black;
-        }
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .feature-card {
+        width: calc(50% - 20px); /* Adjust width for two cards in a row */
+    }
+}
 
-        .feature-card p {
-            color: #333;
-            font-size: 18px;
-            margin: 0;
-        }
+@media (min-width: 769px) {
+    .feature-card {
+        width: calc(25% - 20px); /* Four cards in a row for larger screens */
+    }
+}
 
-        /* Medium Screens: 1200px and below */
-        @media (max-width: 1200px) {
-            .features {
-                grid-template-columns: repeat(4, 1fr);
-                /* Four cards per row */
-                padding: 100px 100px;
-                /* Reduced padding for medium screens */
-            }
-
-            .icon {
-                font-size: 36px;
-                /* Smaller icon size */
-            }
-        }
-
-        /* Small Screens: 992px and below */
-        @media (max-width: 992px) {
-            .features {
-                grid-template-columns: repeat(3, 1fr);
-                /* Three cards per row */
-                padding: 80px 50px;
-                /* Further reduced padding for small screens */
-            }
-
-            .icon {
-                font-size: 32px;
-                /* Smaller icon size */
-            }
-        }
-
-        /* Smaller Screens: 768px and below */
-        @media (max-width: 768px) {
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-                /* Two cards per row */
-                padding: 60px 40px;
-                /* Padding for smaller screens */
-            }
-
-            .feature-card {
-                width: 90%;
-                /* Adjust card width on smaller screens */
-                padding: 30px;
-                /* Adjust padding inside the card */
-            }
-
-            .icon {
-                font-size: 28px;
-                /* Smaller icon size */
-            }
-        }
-
-        /* Extra Small Screens: 480px and below */
-        @media (max-width: 480px) {
-            .features {
-                grid-template-columns: repeat(2, 1fr);
-                /* Two cards per row */
-                padding: 0px 0px;
-                /* Minimal padding for extra small screens */
-            }
-
-            .feature-card {
-                width: 60%;
-                /* Full width on extra small screens */
-                margin-bottom: 20px;
-                padding: 0px;
-                /* Further adjust padding inside the card */
-            }
-
-            .icon {
-                font-size: 14px;
-                /* Smaller icon size */
-            }
-        }
     </style>
+
 
     <section>
         <div class="features">
