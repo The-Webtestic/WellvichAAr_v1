@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-     <!-- nav bar start -->
-     <style>
+    <!-- nav bar start -->
+    <style>
+        body {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0;
+            background-color: #f3f1e7;
+            overflow-x: hidden;
+
+        }
+
         .nav-container {
             display: flex;
             align-items: center;
@@ -22,6 +32,7 @@
             background-color: #f3f1e7;
             color: #126796;
             font-weight: bold;
+            overflow-x: hidden;
         }
 
         .nav-container .logo img {
@@ -40,8 +51,20 @@
             padding: 10px;
         }
 
+        .social-media-links .fa-facebook-f,
+        .social-media-links .fa-instagram,
+        .social-media-links .fa-twitter {
+            width: 20px;
+            /* Standardize width for alignment */
+            height: 20px;
+            /* Standardize height for alignment */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .nav-links :hover {
-            text-decoration: underline 8px #126796;
+            text-decoration: underline 8px #dab968;
         }
 
         .menu-toggle {
@@ -67,23 +90,30 @@
         }
 
         .dropdown-content a:hover {
-            color: white;
+            color: #126796;
+            ;
             font-weight: bold;
         }
 
         .dropdown-content li {
             list-style-type: none;
+            color: #126796;
         }
 
         .dropdown-content li a {
             padding: 12px 16px;
             display: block;
             text-decoration: none;
-            color: white;
+            color: #126796;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        .social-media-links a:hover i {
+            background-color: #dab968;
+            /* Change to a different color on hover */
         }
 
         /* Social Media Links */
@@ -91,16 +121,39 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-        }
 
-        .social-media-links a {
-            margin-left: 10px;
+            justify-content: center;
+            /* Center the icons in their container */
         }
 
         .social-media-links i {
             color: white;
             background-color: #126796;
-            border-radius: 30%;
+            padding: 15px;
+            border-radius: 50%;
+            /* Complete rounding */
+            font-size: 20px;
+            /* Adjust the font size if needed */
+        }
+
+        .social-media-links a {
+            margin: 0;
+            /* Remove additional margins around links */
+            display: inline-flex;
+            /* Align items centered in the link element */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            padding: 10px;
+            /* Adjust padding to make the icon areas smaller */
+            border-radius: 50%;
+            /* Ensure completely round icons */
+            font-size: 20px;
+            /* Adjust the font size if needed */
         }
 
         .contact-button {
@@ -181,7 +234,7 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
+                <a href="#about">About</a>
                 <div class="dropdown">
                     <a href="counselling.html#team">Our Team</a>
                     <ul class="dropdown-content">
@@ -189,8 +242,8 @@
                         <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
                     </ul>
                 </div>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#specializations">Specializations</a>
+                <a href="#services">Services</a>
+                <a href="#specializations">Specializations</a>
                 <div class="social-media-links">
                     <a href="https://www.facebook.com" target="_blank">
                         <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
@@ -210,11 +263,10 @@
 
 
     <!-- nav bar end -->
-
-        <!-- Hero start  -->
+    <!-- Hero start  -->
 
     <section class="hero" id="privacy">
-        <div class="hero-content" >
+        <div class="hero-content">
             <h1>PRIVACY POLICY</h1>
             <h2>LAST UPDATED MAY 2024</h2>
         </div>
@@ -223,42 +275,43 @@
 
 
     <section class="privacy">
-    <div class="privacy-policy">
-        <div style="margin-left: 10%;">
-            <div>
-                <h1>1. Information Collection</h1>
-                <p>We collect personal information for therapy purposes only.</p>
+        <div class="privacy-policy">
+            <div style="margin-left: 10%;">
+                <div>
+                    <h1>1. Information Collection</h1>
+                    <p>We collect personal information for therapy purposes only.</p>
+                </div>
+                <div>
+                    <h1>2. Data Security</h1>
+                    <p>We use industry-standard security measures to protect your data.</p>
+                </div>
+                <div>
+                    <h1>3. Confidentiality</h1>
+                    <p>Your information is kept confidential, except as required by law.</p>
+                </div>
+                <div>
+                    <h1>4. Data Retention</h1>
+                    <p> We retain your information as long as necessary and securely dispose of it afterward.</p>
+                </div>
+                <div>
+                    <h1>5. Third-party Disclosure</h1>
+                    <p>We do not share your information with third parties without your consent, except as required by
+                        law.</p>
+                </div>
+                <div>
+                    <h1>6. Your Rights</h1>
+                    <p>You have the right to access, correct, or request deletion of your information.</p>
+                </div>
             </div>
-            <div>
-                <h1>2. Data Security</h1>
-                <p>We use industry-standard security measures to protect your data.</p>
-            </div>
-            <div>
-                <h1>3. Confidentiality</h1>
-                <p>Your information is kept confidential, except as required by law.</p>
-            </div>
-            <div>
-                <h1>4. Data Retention</h1>
-                <p> We retain your information as long as necessary and securely dispose of it afterward.</p>
-            </div>
-            <div>
-                <h1>5. Third-party Disclosure</h1>
-                <p>We do not share your information with third parties without your consent, except as required by law.</p>
-            </div>
-            <div>
-                <h1>6. Your Rights</h1>
-                <p>You have the right to access, correct, or request deletion of your information.</p>
-            </div>
+
         </div>
-        
-    </div>
     </section>
 
 
-     <!-- Hero start2  -->
+    <!-- Hero start2  -->
 
-     <section class="hero2" id="terms">
-        <div class="hero-content2" >
+    <section class="hero2" id="terms">
+        <div class="hero-content2">
             <h1>TERMS AND CONDITIONS </h1>
             <h2>LAST UPDATED MAY 2024</h2>
         </div>
@@ -275,11 +328,14 @@
                 </div>
                 <div>
                     <h1>2. Appointments</h1>
-                    <p>Sessions must be booked at least 2 days in advance. Clients are required to notify us at least 24 hours in advance for cancellations or rescheduling. While refunds will not be provided for cancellations, clients can reschedule their appointments if needed.</p>
+                    <p>Sessions must be booked at least 2 days in advance. Clients are required to notify us at least 24
+                        hours in advance for cancellations or rescheduling. While refunds will not be provided for
+                        cancellations, clients can reschedule their appointments if needed.</p>
                 </div>
                 <div>
                     <h1>3. Payment</h1>
-                    <p>We accept payment only via credit/debit cards or electronic funds transfer at the time of the session.</p>
+                    <p>We accept payment only via credit/debit cards or electronic funds transfer at the time of the
+                        session.</p>
                 </div>
                 <div>
                     <h1>4. Therapeutic Relationship</h1>
@@ -304,9 +360,9 @@
             </div>
         </div>
     </section>
-    
 
-    
+
+
 
 
     <!-- footer start -->
@@ -348,8 +404,13 @@
                 </a>
             </div>
             <div class="footer-bottom">
-                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'" href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a> </p>
-                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a href="#terms">TERMS AND CONDITIONS</a></p>
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a
+                        style="color: #dab968;" onmouseover="this.style.color='white'"
+                        onmouseout="this.style.color='#dab968'"
+                        href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a>
+                </p>
+                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
+                        href="#terms">TERMS AND CONDITIONS</a></p>
             </div>
         </div>
     </footer>
@@ -358,4 +419,5 @@
 
 
 </body>
+
 </html>

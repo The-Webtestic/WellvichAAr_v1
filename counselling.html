@@ -16,8 +16,6 @@
 
 <body>
     <!-- nav bar start -->
-
-
     <style>
         body {
             font-family: "Gothic A1", sans-serif;
@@ -35,6 +33,7 @@
             background-color: #f3f1e7;
             color: #126796;
             font-weight: bold;
+            overflow: hidden;
         }
 
         .nav-container .logo img {
@@ -53,8 +52,20 @@
             padding: 10px;
         }
 
+        .social-media-links .fa-facebook-f,
+        .social-media-links .fa-instagram,
+        .social-media-links .fa-twitter {
+            width: 20px;
+            /* Standardize width for alignment */
+            height: 20px;
+            /* Standardize height for alignment */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .nav-links :hover {
-            text-decoration: underline 8px #126796;
+            text-decoration: underline 8px #dab968;
         }
 
         .menu-toggle {
@@ -80,23 +91,30 @@
         }
 
         .dropdown-content a:hover {
-            color: white;
+            color: #126796;
+            ;
             font-weight: bold;
         }
 
         .dropdown-content li {
             list-style-type: none;
+            color: #126796;
         }
 
         .dropdown-content li a {
             padding: 12px 16px;
             display: block;
             text-decoration: none;
-            color: white;
+            color: #126796;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        .social-media-links a:hover i {
+            background-color: #dab968;
+            /* Change to a different color on hover */
         }
 
         /* Social Media Links */
@@ -104,16 +122,39 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-        }
 
-        .social-media-links a {
-            margin-left: 10px;
+            justify-content: center;
+            /* Center the icons in their container */
         }
 
         .social-media-links i {
             color: white;
             background-color: #126796;
-            border-radius: 30%;
+            padding: 15px;
+            border-radius: 50%;
+            /* Complete rounding */
+            font-size: 20px;
+            /* Adjust the font size if needed */
+        }
+
+        .social-media-links a {
+            margin: 0;
+            /* Remove additional margins around links */
+            display: inline-flex;
+            /* Align items centered in the link element */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            padding: 10px;
+            /* Adjust padding to make the icon areas smaller */
+            border-radius: 50%;
+            /* Ensure completely round icons */
+            font-size: 20px;
+            /* Adjust the font size if needed */
         }
 
         .contact-button {
@@ -194,16 +235,16 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
+                <a href="#about">About</a>
                 <div class="dropdown">
                     <a href="counselling.html#team">Our Team</a>
                     <ul class="dropdown-content">
-                        <li><a href="#Clinical Psychologist">Clinical Psychologists</a></li>
-                        <li><a href="#Counseling Psychologist">Counseling Psychologists1</a></li>
+                        <li><a href="counselling.html#Clinical Psychologist">Clinical Psychologists</a></li>
+                        <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
                     </ul>
                 </div>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#specializations">Specializations</a>
+                <a href="#services">Services</a>
+                <a href="#specializations">Specializations</a>
                 <div class="social-media-links">
                     <a href="https://www.facebook.com" target="_blank">
                         <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
@@ -216,13 +257,13 @@
                     </a>
                 </div>
                 <a href="counselling.html" style="color: white;" onmouseover="this.style.color='#126796'"
-                    onmouseout="this.style.color='white'" class="contact-button">Start Counselling</a>
+                    onmouseout="this.style.color='white'" class="contact-button">Counsellinag Start</a>
             </div>
         </div>
     </nav>
 
-    <!-- nav bar end -->
 
+    <!-- nav bar end -->
 
     <!-- Hero start -->
 
@@ -234,6 +275,7 @@
             background-color: #f3f1e7;
             padding: 2% 5%;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
         .hero-content {
@@ -330,7 +372,7 @@
                 Fostering Healing, Growth and Resilience.</h3>
         </div>
         <div class="hero-image">
-            <img src="images/banner-girl-01-01-1024x1024.png" alt="girl banner" class="girl-banner" />
+            <img src="images/1000043857-removebg-preview.png" alt="girl banner" class="girl-banner" />
         </div>
     </section>
 
@@ -339,16 +381,17 @@
 
 
     <!-- card start -->
-
     <style>
         .card-container {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
-            background-color: #126796;
+            background-color: white;
             padding: 50px;
+            flex-wrap: wrap;
         }
-
+    
         .card {
             border: 2px dashed #c2c2c2;
             border-radius: 10px;
@@ -358,18 +401,14 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-out;
-            /* Updated to include transform in transition */
         }
-
+    
         .card:hover {
             border-color: #dab968;
-            /* Change border color on hover */
             box-shadow: 0px 8px 16px rgba(46, 204, 113, 0.6);
-            /* Greenish shadow on hover */
             transform: scale(1.05);
-            /* Scale up the card for 3D effect */
         }
-
+    
         .card-title {
             background-color: #126796;
             color: white;
@@ -378,14 +417,14 @@
             font-size: 24px;
             margin: -20px -20px 20px -20px;
         }
-
+    
         .card p {
             font-weight: 600;
             font-size: 19px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;
         }
-
+    
         .price-button {
             background-color: #126796;
             color: white;
@@ -396,31 +435,64 @@
             font-weight: bold;
             transition: background-color 0.3s, transform 0.3s;
         }
-
+    
         .price-button:hover {
             background-color: #dab968;
             transform: scale(1.05);
         }
-
+    
+        @media (max-width: 1200px) {
+            .card-container {
+                padding: 40px;
+            }
+    
+            .card {
+                width: 80%;
+            }
+        }
+    
         @media (max-width: 768px) {
             .card-container {
                 flex-direction: column;
                 align-items: center;
+                padding: 30px;
+            }
+    
+            .card {
+                width: 90%;
+            }
+    
+            .icon {
+                font-size: 32px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .card-container {
+                padding: 20px;
+            }
+    
+            .card {
+                width: 100%;
+            }
+    
+            .icon {
+                font-size: 28px;
             }
         }
     </style>
-
+    
     <section>
         <div class="card-container">
             <div class="card">
-                <h2 class="card-title">Heal</h2>
-                <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 4</p>
-                <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
-                <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 60 days</p>
+                <h2 class="card-title">Book Your Session</h2>
+                <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 1</p>
+                <p><i class="far fa-clock" style="color: #dab968;"></i> 50 Minutes / Session</p>
+                <!-- <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 60 days</p> -->
                 <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
-                <button class="price-button">INR 18,000/-</button>
+                <button class="price-button">INR 1700/-</button>
             </div>
-            <div class="card">
+            <!-- <div class="card">
                 <h2 class="card-title">Know</h2>
                 <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 1</p>
                 <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
@@ -435,187 +507,12 @@
                 <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 120 days</p>
                 <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
                 <button class="price-button">INR 36,000/-</button>
-            </div>
+            </div> -->
         </div>
     </section>
 
 
     <!-- card end -->
-
-    <!-- feature start -->
-
-    <style>
-        .features {
-            display: flex;
-            justify-content: center;
-            /* Center items */
-            flex-wrap: wrap;
-            /* Allow wrapping */
-            padding: 20px;
-            background-color: white;
-        }
-
-        .feature-card {
-            background-color: white;
-            width: 250px;
-            /* Width of each card */
-            text-align: center;
-            padding: 50px 20px;
-            /* 50px padding top and bottom, 20px left and right */
-            margin: 20px;
-            /* Space between cards */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Shadow for depth */
-            transition: transform 0.3s, background-color 0.3s;
-            /* Smooth transition for transform and background color */
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            /* Lift card on hover */
-            background-color: #f3f1e7;
-            /* Light background color on hover */
-        }
-
-        .icon {
-            color: #dab968;
-            /* Initial color of icons */
-            font-size: 40px;
-            /* Icon size */
-            margin-bottom: 10px;
-            /* Space below the icon */
-            transition: color 0.3s;
-            /* Smooth transition for color change */
-        }
-
-        .icon:hover {
-            color: black;
-            /* Change icon color to black on hover */
-        }
-
-        .feature-card p {
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-            /* Text size */
-            margin: 0;
-            /* No additional margin */
-        }
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .feature-card {
-                width: 90%;
-                /* Take more width on smaller screens */
-                margin-bottom: 20px;
-                /* Space between stacked cards */
-            }
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            /* Ensure items are centered */
-            flex-wrap: wrap;
-            /* Allow items to wrap if needed */
-            padding: 40px;
-            /* Increased padding for more space inside the container */
-            background-color: white;
-        }
-
-        .feature-card {
-            background-color: white;
-            width: 250px;
-            /* Increase the width of each card */
-            text-align: center;
-            padding: 30px;
-            /* Increase padding inside each card for a larger appearance */
-            margin: 20px;
-            /* Increase margin to add space between cards */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            /* Slightly larger shadow for depth */
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            /* Slightly larger hover effect */
-        }
-
-        .icon {
-            color: #dab968;
-            font-size: 40px;
-            /* Larger icon size for better visibility */
-            margin-bottom: 10px;
-            /* Adjust margin to space out text from icon */
-        }
-
-        .feature-card p {
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-            /* Increase font size for better readability */
-            margin: 0;
-            /* Remove additional margin */
-        }
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .feature-card {
-                width: 90%;
-                /* Cards take up more width on smaller screens */
-                margin-bottom: 20px;
-                /* Sufficient space between stacked cards */
-                padding: 20px;
-                /* Adjust padding to better fit mobile screens */
-            }
-
-            .icon {
-                font-size: 36px;
-                /* Slightly smaller icons fit better on mobile */
-            }
-        }
-    </style>
-
-    <section>
-        <div class="features">
-            <div class="feature-card">
-                <div class="icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                <p>Individual Sessions</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <p>Completely Confidential</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <p>Personalised Approach</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <p>Evidence Based Therapies</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- feature end -->
 
     <!-- our team start -->
     <style>
@@ -710,14 +607,293 @@
 
         <div class="team">
             <img src="images/IMG_20240116_000031_474 (1).jpg" alt="Lorem Ipsum">
-            <h1>Lorem, ipsum.</h1>
-            <h2>Lorem, ipsum.</h2>
+            <h1>Vaibhav Jain</h1>
+            <h2>Clinical Psychologist</h2>
         </div>
     </section>
 
 
 
     <!-- our team end -->
+
+    <!-- feature start -->
+
+    <style>
+        .features {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* Six cards per row on large screens */
+            justify-items: center;
+            gap: 20px;
+            padding: 120px 150px; /* Padding for large screens */
+            background-color: white;
+            overflow: hidden;
+            width: 100% ;
+        }
+    
+        .feature-card {
+            background-color: white;
+            width: 250px;
+            text-align: center;
+            padding: 50px 20px; /* Padding inside the card */
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+    
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background-color: #f3f1e7;
+        }
+    
+        .icon {
+            color: #dab968;
+            font-size: 40px; /* Initial icon size for large screens */
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+    
+        .icon:hover {
+            color: black;
+        }
+    
+        .feature-card p {
+            color: #333;
+            font-size: 18px;
+            margin: 0;
+        }
+    
+        /* Medium Screens: 1200px and below */
+        @media (max-width: 1200px) {
+            .features {
+                grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+                padding: 100px 100px; /* Reduced padding for medium screens */
+            }
+    
+            .icon {
+                font-size: 36px; /* Smaller icon size */
+            }
+        }
+    
+        /* Small Screens: 992px and below */
+        @media (max-width: 992px) {
+            .features {
+                grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+                padding: 80px 50px; /* Further reduced padding for small screens */
+            }
+    
+            .icon {
+                font-size: 32px; /* Smaller icon size */
+            }
+        }
+    
+        /* Smaller Screens: 768px and below */
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+                padding: 60px 40px; /* Padding for smaller screens */
+            }
+    
+            .feature-card {
+                width: 90%; /* Adjust card width on smaller screens */
+                padding: 30px; /* Adjust padding inside the card */
+            }
+    
+            .icon {
+                font-size: 28px; /* Smaller icon size */
+            }
+        }
+    
+        /* Extra Small Screens: 480px and below */
+        @media (max-width: 480px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+                padding: 0px 0px; /* Minimal padding for extra small screens */
+            }
+    
+            .feature-card {
+                width: 60%; /* Full width on extra small screens */
+                margin-bottom: 20px;
+                padding: 0px; /* Further adjust padding inside the card */
+            }
+    
+            .icon {
+                font-size: 14px; /* Smaller icon size */
+            }
+        }
+    </style>
+    
+    <section>
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <p>Individual Sessions</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <p>Completely Confidential</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Personalised Approach</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <p>Evidence Based Therapies</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- feature end -->
+
+
+    <!-- contact form -->
+
+    <style>
+        .contact-form-section {
+            background-color: #f3f1e7;
+            color: #126796;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form-section .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section h2 {
+            color: #126796;
+        }
+
+        .contact-form-section p {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        textarea {
+            width: 48%;
+            /* Adjusts the width to fit 2 inputs per line */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            /* Full width for the textarea */
+            resize: none;
+            /* Disables resizing the textarea */
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #126796;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            border: solid 1px #126796;
+        }
+
+        .button:hover {
+            background-color: #f3f1e7;
+            color: #126796;
+            border: solid 1px #126796;
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                flex-direction: column;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            textarea {
+                width: 100%;
+                /* Full width for smaller devices */
+            }
+        }
+    </style>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h1 style="font-size: 36px;">Got Queries?</h1>
+            <p style="font-size: 26px; color: #dab968;">If you have any questions or want to reach out for events,
+                keynotes, and corporate queries. Please fill
+                out the form.</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="age" name="age" placeholder="Age">
+                    <input type="text" id="city" name="city" placeholder="City">
+                    <input type="text" id="profession" name="profession" placeholder="Profession">
+                </div>
+                <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
+                <input class="button" type="submit" value="submit" onclick="sendMail();">
+
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function sendMail() {
+            const fields = {
+                "First Name": document.getElementById('first-name').value,
+                "Last Name": document.getElementById('last-name').value,
+                "Email": document.getElementById('email').value,
+                "WhatsApp Number": document.getElementById('whatsapp').value,
+                "Age": document.getElementById('age').value,
+                "City": document.getElementById('city').value,
+                "Profession": document.getElementById('profession').value,
+                "Message": document.getElementById('message').value
+            };
+
+            let emailSubject = `New Query from ${fields["First Name"]} ${fields["Last Name"]}`;
+            let emailBody = "";
+
+            for (let key in fields) {
+                emailBody += `${key}: ${fields[key]}\n`;  // Append each field as key: value
+            }
+
+            const mailtoLink = `mailto:wellvichaar@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+
+
+    </script>
+
+
+
+    <!-- contact end -->
+
 
     <!-- footer start -->
 

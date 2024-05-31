@@ -57,8 +57,20 @@
             padding: 10px;
         }
 
+        .social-media-links .fa-facebook-f,
+        .social-media-links .fa-instagram,
+        .social-media-links .fa-twitter {
+            width: 20px;
+            /* Standardize width for alignment */
+            height: 20px;
+            /* Standardize height for alignment */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .nav-links :hover {
-            text-decoration: underline 8px #126796;
+            text-decoration: underline 8px #dab968;
         }
 
         .menu-toggle {
@@ -84,23 +96,30 @@
         }
 
         .dropdown-content a:hover {
-            color: white;
+            color: #126796;
+            ;
             font-weight: bold;
         }
 
         .dropdown-content li {
             list-style-type: none;
+            color: #126796;
         }
 
         .dropdown-content li a {
             padding: 12px 16px;
             display: block;
             text-decoration: none;
-            color: white;
+            color: #126796;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        .social-media-links a:hover i {
+            background-color: #dab968;
+            /* Change to a different color on hover */
         }
 
         /* Social Media Links */
@@ -108,16 +127,39 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-        }
 
-        .social-media-links a {
-            margin-left: 10px;
+            justify-content: center;
+            /* Center the icons in their container */
         }
 
         .social-media-links i {
             color: white;
             background-color: #126796;
-            border-radius: 30%;
+            padding: 15px;
+            border-radius: 50%;
+            /* Complete rounding */
+            font-size: 20px;
+            /* Adjust the font size if needed */
+        }
+
+        .social-media-links a {
+            margin: 0;
+            /* Remove additional margins around links */
+            display: inline-flex;
+            /* Align items centered in the link element */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            padding: 10px;
+            /* Adjust padding to make the icon areas smaller */
+            border-radius: 50%;
+            /* Ensure completely round icons */
+            font-size: 20px;
+            /* Adjust the font size if needed */
         }
 
         .contact-button {
@@ -237,26 +279,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0px 0px 0px 0px;
+            padding: 0px;
             box-sizing: border-box;
             overflow-x: hidden;
         }
 
         .hero-content {
             width: 50%;
-        }
-
-        .hero-content {
             padding: 0px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
         }
 
         .hero-content h1 {
             color: #126796;
-            font-size: 46px;
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
-        .hero-content h3 {
+        .hero-content h2 {
             color: #cfa84b;
             font-size: 18px;
             margin-bottom: 10px;
@@ -265,11 +308,12 @@
         .hero-content a {
             background-color: #126796;
             color: white;
-            padding: 15px 30px;
-            font-size: 16px;
+            padding: 10px 20px;
+            font-size: 22px;
             text-decoration: none;
             display: inline-block;
             transition: background-color 0.3s, color 0.3s;
+            max-width: 175px;
         }
 
         .hero-content a:hover {
@@ -281,31 +325,32 @@
         .hero-image {
             width: 40%;
             text-align: center;
-            margin-bottom: -5px;
-            /* Adjust the bottom margin to eliminate space */
+            margin-bottom: 0;
+            /* Removes bottom margin if any */
         }
 
         .hero-image img {
             width: 80%;
             height: auto;
+            margin-bottom: 0;
+            /* Ensure no margin is applied */
             display: block;
-            /* Ensures the image does not leave space for line descenders */
         }
 
         .rozi-name {
-            background-color: #1a1a1a;
+            background-color: #D2D2D0;
             color: white;
-            text-align: left;
+            text-align: center;
             padding: 20px;
             width: 80%;
-            /* Match the width of the image */
             margin-top: 0;
-            /* Remove default top margin if any */
+            /* Ensure no top margin */
         }
 
         @media (max-width: 768px) {
             .hero {
                 flex-direction: column;
+                align-items: center;
             }
 
             .hero-content,
@@ -315,10 +360,18 @@
 
             .hero-content h1 {
                 font-size: 32px;
+                padding-left: 15px;
             }
 
-            .hero-content h3 {
+            .hero-content h2 {
                 font-size: 16px;
+                padding-left: 15px;
+            }
+
+            .hero-content a {
+                font-size: 16px;
+                padding: 8px 16px;
+                margin-left: 15px;
             }
 
             .hero-image img,
@@ -328,30 +381,37 @@
         }
 
         @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 28px;
+
+            .hero-content h1,
+            .hero-content h2,
+            .hero-content a {
+                font-size: 16px;
             }
 
-            .hero-content h3 {
+            .hero-content h2 {
                 font-size: 14px;
             }
         }
     </style>
+
+
+
     <section class="hero">
         <div class="hero-content">
-            <h1 style="font-size: 36px;">Welcome To WellvichAAr</h1>
-            <h2 style="color: #dab968; font-size: 26px;">At Well Vichaar, our uniqueness lies in our empathetic and
-                holistic approach to mental wellness.</h2>
+            <h1>Welcome To WellvichAAr</h1>
+            <h2 style="color: #dab968;">At Well Vichaar, our uniqueness lies in our empathetic and holistic approach to
+                mental wellness.</h2>
             <a href="counselling.html" class="contact-button" style="font-weight: bold;">Counselling Start</a>
         </div>
         <div class="hero-image">
             <img src="images/rozi-removebg-preview.png" alt="Rozi's Image" class="rozi-image">
             <div class="rozi-name">
-                <h1 style="font-size: 36px;">Meet Miss. Rozi</h1>
-                <h2 style="font-size: 26px; color: #dab968;">Founder and Co of WellvichAAr</h2>
+                <h1 style="color: black;">Meet Miss. Rozi</h1>
+                <h2 style="color: #dab968;">Founder and CEO of WellvichAAr</h2>
             </div>
         </div>
     </section>
+
 
 
     <!-- Hero end -->
@@ -361,11 +421,10 @@
 
     <style>
         .aboutus-section {
-            min-height: 490px;
+            min-height: 350px;
             background-color: #126796;
             color: white;
             display: flex;
-            /* align-items: center; */
             justify-content: center;
             font-family: "Gothic A1", sans-serif;
             padding: 20px;
@@ -385,76 +444,70 @@
         .aboutus-content h1 {
             color: #dab968;
             font-size: 37px;
-            margin: 5px 0;
+            margin: 0 0 20px 0;
         }
 
         .aboutus-content h2 {
             font-size: 25px;
             color: #ffffff;
+            margin-bottom: 10px;
         }
 
         .aboutus-content p {
-            text-align: center;
-            white-space: pre-wrap;
-            transition-timing-function: ease;
-            transition-duration: 1.5s;
-            transition-delay: 0.12093s;
-            font-size: 22px;
-            line-height: 35px;
+            text-align: justify;
+            white-space: normal;
+            font-size: 18px;
+            line-height: 1.6;
             color: #b2dfdb;
-            margin-bottom: 20px;
+            margin-bottom: 0;
+            /* Reduced to 0 to remove extra padding below the text */
+            transition: color 0.3s ease;
         }
 
         .aboutus-content button {
             background-color: #ffffff;
             font-size: 16px;
-            padding: 15px 30px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            text-align: center;
             text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .aboutus-content button:hover {
             background-color: #126796;
-            border-radius: 5px;
             color: #ffffff;
-            border: solid 1px #ffffff;
+            border: 1px solid #ffffff;
         }
 
-        /* Responsive styling */
         @media (max-width: 768px) {
-            .aboutus-content h1 {
-                font-size: 28px;
-                margin: 4px 0;
+            .aboutus-section {
+                padding: 10px;
             }
 
+            .aboutus-container {
+                padding: 15px;
+            }
+
+            .aboutus-content h1,
             .aboutus-content h2 {
                 font-size: 22px;
-                color: #ffffff;
             }
 
             .aboutus-content p {
-                text-align: start;
-                font-size: 14px;
-                line-height: 20px;
-                color: #b2dfdb;
-                margin-bottom: 20px;
+                font-size: 16px;
+                line-height: 1.4;
             }
         }
     </style>
-
     <section id="about" class="aboutus-section">
         <div class="aboutus-container">
             <div class="aboutus-content">
                 <h2 style="color: #dab968; font-size: 26px;">About Us</h2>
-                <h1 style="font-size: 36px; color: white;">Welcome to Well Vichaar, your sanctuary for mental wellness
-                    and personal growth<span style="color: #dab968;">.</span></h1>
-                <p>At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led by a compassionate team of
-                    RCI Certified Clinical psychologists, counseling psychologists, and top-tier psychiatrists, we offer
-                    a haven for those seeking clarity, healing, and renewal.
-
-                    Let us be your partners in growth, your champions of resilience, and your guides to a brighter, more
+                <p style="font-weight: bold;">At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led
+                    by a compassionate team of RCI Certified Clinical psychologists, counseling psychologists, and
+                    top-tier psychiatrists, we offer a haven for those seeking clarity, healing, and renewal.Let us be
+                    your partners in growth, your champions of resilience, and your guides to a brighter, more
                     fulfilling tomorrow.Choose WellvichAAr—the right place for your journey to well-being.</p>
             </div>
         </div>
@@ -865,12 +918,12 @@
 
 
     <!-- start OUR SERVICES -->
-
     <style>
         .services-section {
             text-align: center;
             background-color: #fff;
-            padding: 120px 20px;
+            padding: 120px 250px;
+            /* Large screens padding */
         }
 
         .services-section h1,
@@ -881,14 +934,16 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
+            /* Six cards per row on full size screens */
             gap: 20px;
             padding: 20px;
         }
 
         .service-item {
             border: 2px solid #c2c2c2;
-            padding: 0;
+            padding: 10px;
+            /* Aesthetic padding */
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -899,21 +954,19 @@
         .service-item img {
             width: 100%;
             height: 200px;
-            /* Fixed height for all images */
+            /* Fixed height for images */
             object-fit: cover;
-            /* Ensures images cover the area without distortion */
-            display: block;
         }
 
         .service-item h2 {
             background-color: #f3f3f3;
-            padding: 10px;
             margin: 0;
             color: #126796;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 16px;
         }
 
         .services-section a {
@@ -929,18 +982,63 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        @media (max-width: 768px) {
+        /* Medium Screens: 1200px and below */
+        @media (max-width: 1200px) {
+            .services-section {
+                padding: 100px 150px;
+                /* Moderately reduced padding for medium screens */
+            }
+
             .services-grid {
-                grid-template-columns: 1fr;
-                /* Ensure cards stack vertically on smaller screens */
+                grid-template-columns: repeat(4, 1fr);
+                /* Four cards per row */
+            }
+        }
+
+        /* Small Screens: 768px and below */
+        @media (max-width: 768px) {
+            .services-section {
+                padding: 80px 100px;
+                /* Further reduced padding for small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* Three cards per row */
+            }
+        }
+
+        /* Very Small Screens: 600px and below */
+        @media (max-width: 600px) {
+            .services-section {
+                padding: 60px 50px;
+                /* Small padding for very small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Two cards per row */
+            }
+        }
+
+        /* Extra Small Screens: 480px and below */
+        @media (max-width: 480px) {
+            .services-section {
+                padding: 40px 20px;
+                /* Minimal padding for extra small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Adjust to keep two cards in a row */
             }
         }
     </style>
 
 
     <section class="services-section" id="services">
-        <h2 style="color: #dab968; font-size: 26px;">Our Services</h2>
-        <h1 style="font-size: 36px;">What I can help you with</h1>
+        <h2 style="color: #dab968;">Our Services</h2>
+        <h1>What I can help you with</h1>
         <div class="services-grid">
             <div class="service-item">
                 <img src="images/images (1).jpeg" alt="Stress Management">
@@ -1063,53 +1161,94 @@
     <!-- Book start -->
     <style>
         .book-section {
-            background-color: #126796;
-            padding: 20px;
+            background-color: white;
+            padding: 40px;
+            /* Increase padding for more spacing */
             text-align: center;
         }
 
-        .book-section h1 {
+        .book-card {
+            display: inline-block;
+            background-color: #126796;
+            border: 2px solid #dab968;
+            /* Border color */
+            border-radius: 15px;
+            /* Rounded corners */
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Shadow for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            /* Lift card on hover */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            /* Darker shadow on hover */
+            border-color: #126796;
+            /* Border color change on hover */
+        }
+
+        .book-card h1 {
             color: #dab968;
             margin-bottom: 20px;
         }
 
-        .book-section h2,
-        .book-section h3,
-        .book-section .book-button {
+        .book-card h2,
+        .book-card h3,
+        .book-card .book-button {
             color: white;
             margin-bottom: 10px;
         }
 
-        .book-section .book-button {
+        .book-card .book-button {
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
             border: 2px solid white;
-            transition: color 0.3s, border-color 0.3s;
+            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+            /* Smooth transition for button */
         }
 
-        .book-section .book-button:hover {
-            color: #126796;
+        .book-card .book-button:hover {
+            color: #333;
             background-color: white;
             border-color: #126796;
         }
 
+        .book-card p {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+            /* Ensure consistent spacing */
+        }
+
         /* Responsive Styles */
         @media (max-width: 600px) {
-            .book-section h1 {
+            .book-section {
+                padding: 20px;
+            }
+
+            .book-card {
+                width: 100%;
+            }
+
+            .book-card h1 {
                 font-size: 24px;
             }
 
-            .book-section h2 {
+            .book-card h2 {
                 font-size: 18px;
             }
 
-            .book-section h3 {
+            .book-card h3 {
                 font-size: 16px;
             }
 
-            .book-section .book-button {
+            .book-card .book-button {
                 padding: 8px 16px;
             }
         }
@@ -1117,27 +1256,22 @@
 
 
 
-    <section class="book-section">
-        <h1 style="font-size: 36px; color: white;">Start Your Journey</h1>
-        <h2 style="font-size: 26px; color: #dab968;">Book A Session</h2>
-        <h3 style="color: white;"><del>₹ 2,999/-</del></h3>
-        <h2 style="color: #dab968; font-size: 26px;">₹ 1,500/-</h2>
-        <p style="color: white; font-weight: bold;"><i class="far fa-check-circle" style="color: #dab968;"></i> No. of
-            Sessions : 1</p>
-        <p style="color: white; font-weight: bold;"><i class="far fa-clock" style="color: #dab968;"></i></i> Session
-            Duration : 60 minutes
-        </p>
-        <p style="color: white; font-weight: bold;"><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i>
-            Mode: Video or Audio
-        </p>
-        <p style="color: white; font-weight: bold;"><i class="fas fa-shield-alt" style="color: #dab968"></i> Completely
-            Confidential</p>
-        <a href="counselling.html" class="book-button" style="font-weight: bold;"><i class="fas fa-hand-holding-heart"
-                style="color: #dab968; "></i>
-            Start
-            Counselling</a>
 
+    <section class="book-section">
+        <div class="book-card">
+            <h1 style="font-size: 36px;">Start Your Journey</h1>
+            <h2 style="font-size: 26px;">Book A Session</h2>
+            <h3><del>₹ 2,999/-</del></h3>
+            <h2 style="color: #dab968; font-size: 26px;">₹ 1,700/-</h2>
+            <p><i class="far fa-check-circle" style="color: #dab968;"></i> No. of Sessions : 1</p>
+            <p><i class="far fa-clock" style="color: #dab968;"></i> Session Duration : 50 minutes</p>
+            <p><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i> Mode: Video or Audio</p>
+            <p><i class="fas fa-shield-alt" style="color: #dab968"></i> Completely Confidential</p>
+            <a href="counselling.html" class="book-button" style="font-weight: bold;"><i
+                    class="fas fa-hand-holding-heart" style="color: #dab968;"></i> Start Counselling</a>
+        </div>
     </section>
+
 
 
     <!-- Book end -->
@@ -1172,21 +1306,24 @@
         .icon-item {
             width: 33.33%;
             /* Adjust width for three items per row */
-            padding: 12px;
+            padding: 10px;
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            /* Ensures vertical center alignment */
+            align-items: center;
+            /* Aligns items centrally in the column */
         }
 
         .icon-item p {
             color: #126796;
             font-weight: bold;
+            margin-top: 8px;
+            /* Space between icon and text */
         }
 
         .icon-item i {
             font-size: 39px;
+            /* Default icon size */
             color: white;
             padding: 12px;
             border-radius: 18px;
@@ -1222,11 +1359,27 @@
             }
 
             .icon-item {
-                width: 100%;
-                /* Full width on smaller screens */
+                width: 33.33%;
+                /* Ensures three items per row on small screens */
+                padding: 8px;
+                /* Smaller padding to fit better on small screens */
+            }
+
+            .icon-item i {
+                font-size: 24px;
+                /* Smaller icon size for smaller screens */
+                padding: 8px;
+                /* Less padding around the icon */
+            }
+
+            .icons {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
         }
     </style>
+
 
     <section class="unique-section" id="specializations">
         <div class="unique-content">
@@ -1327,7 +1480,7 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .steps-container {
-                flex-direction: column;
+                /* flex-direction: column; */
                 gap: 30px;
             }
 
@@ -1911,6 +2064,35 @@
     </footer>
 
     <!-- footer end -->
+
+    <!-- WhatsApp floating icon -->
+    <a href="https://wa.me/8595871247" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
 
 </body>
 
