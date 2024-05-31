@@ -11,6 +11,155 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+     <!-- nav bar start -->
+     <style>
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vw 4vw;
+            background-color: #f3f1e7;
+            color: #126796;
+            font-weight: bold;
+        }
+
+        .nav-container .logo img {
+            max-height: 75px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links :hover {
+            text-decoration: underline 8px #126796;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            font-size: 24px;
+            color: #126796;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #126796;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-content a:hover {
+            color: white;
+            font-weight: bold;
+        }
+
+        .dropdown-content li {
+            list-style-type: none;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Social Media Links */
+        .social-media-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .social-media-links a {
+            margin-left: 10px;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            border-radius: 30%;
+        }
+
+        .contact-button {
+            background-color: #126796;
+            padding: 10px 10px;
+            border: 1px solid #126796;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-button:hover {
+            background-color: #f3f1e7;
+            border: solid 1px #126796;
+            color: #126796;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+
+            .nav-links,
+            .dropdown-content {
+                display: none;
+                /* Initially hide */
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: #f3f1e7;
+                position: absolute;
+                top: 80px;
+                left: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .social-media-links {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+                /* Spacing after the nav links */
+            }
+
+            .contact-button {
+                display: block;
+                margin-top: 20px;
+                /* Spacing after social media links */
+                width: auto;
+                /* Adjust width to content */
+            }
+        }
+    </style>
     <nav>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -30,44 +179,37 @@
             <div class="menu-toggle">
                 <span>&#9776;</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#team">Our Team</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <div class="dropdown">
+                    <a href="counselling.html#team">Our Team</a>
                     <ul class="dropdown-content">
-                        <li><a href="index.html#doctor2">Clinical Psychologists</a></li>
-                        <li><a href="index.html#doctor3">Counseling Psychologists1</a></li>
-                        <li><a href="index.html#doctor1">Counseling Psychologists2</a></li>
+                        <li><a href="counselling.html#Clinical Psychologist">Clinical Psychologists</a></li>
+                        <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
                     </ul>
-                </li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#specializations">Specializations</a></li>
-                <div class="social-media-links">
-                    <li>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-twitter"></i>
-                        </a>
-                    </li>
                 </div>
-                <li><a href="contact.html" style="color: white;" onmouseover="this.style.color='#126796'"
-                        onmouseout="this.style.color='white'" class="contact-button">Contact Us</a></li>
-            </ul>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#specializations">Specializations</a>
+                <div class="social-media-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                </div>
+                <a href="counselling.html" style="color: white;" onmouseover="this.style.color='#126796'"
+                    onmouseout="this.style.color='white'" class="contact-button">Counsellinag Start</a>
+            </div>
         </div>
     </nav>
+
+
+    <!-- nav bar end -->
 
         <!-- Hero start  -->
 
@@ -171,19 +313,19 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h1>WellvichAAr</h1>
-                <p class="sub-title">Certified Clinical Mental Health Counselor</p>
+                <h1 style="font-size: 36px;">WellvichAAr</h1>
+                <p class="sub-title" style="font-size: 26px;">Certified Clinical Mental Health Counselor</p>
             </div>
             <div class="footer-nav">
-                <a href="index.html#about">About us</a>
+                <a href="index.html#about" style="font-weight: bold;">About us</a>
                 <p>//</p>
-                <a href="index.html#doctor2">Team</a>
+                <a href="counselling.html#team" style="font-weight: bold;">Team</a>
                 <p>//</p>
                 <!-- <a href="#">FAQs</a>
                 <p>//</p> -->
-                <a href="index.html#services">Services</a>
+                <a href="index.html#services" style="font-weight: bold;">Services</a>
                 <p>//</p>
-                <a href="contact.html">Contact</a>
+                <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
             </div>
             <div class="footer-social">
                 <a href="#" aria-label="Facebook">
@@ -206,8 +348,8 @@
                 </a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'" href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a> </p>
-                <p><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a href="#terms">TERMS AND CONDITIONS</a></p>
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'" href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a> </p>
+                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a href="#terms">TERMS AND CONDITIONS</a></p>
             </div>
         </div>
     </footer>

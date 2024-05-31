@@ -11,10 +11,161 @@
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 
 </head>
 
 <body>
+
+    <!-- nav bar start -->
+    <style>
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vw 4vw;
+            background-color: #f3f1e7;
+            color: #126796;
+            font-weight: bold;
+        }
+
+        .nav-container .logo img {
+            max-height: 75px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links :hover {
+            text-decoration: underline 8px #126796;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            font-size: 24px;
+            color: #126796;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #126796;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-content a:hover {
+            color: white;
+            font-weight: bold;
+        }
+
+        .dropdown-content li {
+            list-style-type: none;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Social Media Links */
+        .social-media-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .social-media-links a {
+            margin-left: 10px;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            border-radius: 30%;
+        }
+
+        .contact-button {
+            background-color: #126796;
+            padding: 10px 10px;
+            border: 1px solid #126796;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-button:hover {
+            background-color: #f3f1e7;
+            border: solid 1px #126796;
+            color: #126796;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+
+            .nav-links,
+            .dropdown-content {
+                display: none;
+                /* Initially hide */
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: #f3f1e7;
+                position: absolute;
+                top: 80px;
+                left: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .social-media-links {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+                /* Spacing after the nav links */
+            }
+
+            .contact-button {
+                display: block;
+                margin-top: 20px;
+                /* Spacing after social media links */
+                width: auto;
+                /* Adjust width to content */
+            }
+        }
+    </style>
     <nav>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -34,241 +185,437 @@
             <div class="menu-toggle">
                 <span>&#9776;</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#team">Our Team</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <div class="dropdown">
+                    <a href="counselling.html#team">Our Team</a>
                     <ul class="dropdown-content">
-                        <li><a href="#doctor2">Clinical Psychologists</a></li>
-                        <li><a href="#doctor3">Counseling Psychologists1</a></li>
-                        <li><a href="#doctor1">Counseling Psychologists2</a></li>
+                        <li><a href="counselling.html#Clinical Psychologist">Clinical Psychologists</a></li>
+                        <li><a href="counselling.html#Counseling Psychologist">Counseling Psychologists1</a></li>
                     </ul>
-                </li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#specializations">Specializations</a></li>
-                <div class="social-media-links">
-                    <li>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com" target="_blank">
-                            <i style="color: white; background-color: #126796; border-radius: 50%; padding: 15px;"
-                                class="fab fa-twitter"></i>
-                        </a>
-                    </li>
                 </div>
-                <li><a href="contact.html" style="color: white;" onmouseover="this.style.color='#126796'"
-                        onmouseout="this.style.color='white'" class="contact-button">Contact Us</a></li>
-            </ul>
+                <a href="#services">Services</a>
+                <a href="#specializations">Specializations</a>
+                <div class="social-media-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                </div>
+                <a href="counselling.html" style="color: white;" onmouseover="this.style.color='#126796'"
+                    onmouseout="this.style.color='white'" class="contact-button">Counsellinag Start</a>
+            </div>
         </div>
     </nav>
 
+
+    <!-- nav bar end -->
+
+
     <!-- Hero start -->
-<section class="hero">
-    <div class="hero-content" style="display: flex; flex-direction: column; justify-content: start;">
-        <h1 style="font-size: 46px;">Welcome To WellvichAAr</h1>
-        <h3>At Well Vichaar, our uniqueness lies in our empathetic and holistic approach to mental wellness.</h3>
-        <a href="contact.html" style="color: white; max-width: 100px;" onmouseover="this.style.color='#126796'"
-            onmouseout="this.style.color='white'" class="contact-button">Contact Us</a>
-    </div>
-    <div class="hero-image">
-        <img src="./images/logo2.svg" alt="Therapist with client">
-    </div>
-</section>
-<!-- Hero end -->
 
+    <style>
+        .hero {
+            background-color: #f3f1e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+            box-sizing: border-box;
+        }
 
-   <!-- about us start -->
+        .hero-content {
+            width: 50%;
+        }
+        .hero-content{
+            padding: 0px 40px;
+        }
 
-<section id="about" class="aboutus-section">
-    <div class="aboutus-container">
-        <div class="aboutus-content">
-            <h1>About Us</h1>
-            <h2>Welcome to Well Vichaar, your sanctuary for mental wellness and personal growth<span style="color: #dab968;">.</span></h2>
-            <p>At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led by a compassionate team of RCI Certified Clinical psychologists, counseling psychologists, and top-tier psychiatrists, we offer a haven for those seeking clarity, healing, and renewal.
+        .hero-content h1 {
+            color: #126796;
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
 
-                Let us be your partners in growth, your champions of resilience, and your guides to a brighter, more fulfilling tomorrow.Choose WellvichAAr—the right place for your journey to well-being.</p>
+        .hero-content h3 {
+            color: #cfa84b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content a {
+            background-color: #126796;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero-content a:hover {
+            background-color: #f3f1e7;
+            color: #126796;
+            border: 1px solid #126796;
+        }
+
+        .hero-image {
+            width: 40%;
+            text-align: center;
+            margin-bottom: -5px;
+            /* Adjust the bottom margin to eliminate space */
+        }
+
+        .hero-image img {
+            width: 80%;
+            height: auto;
+            display: block;
+            /* Ensures the image does not leave space for line descenders */
+        }
+
+        .rozi-name {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            width: 80%;
+            /* Match the width of the image */
+            margin-top: 0;
+            /* Remove default top margin if any */
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero-content,
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content h3 {
+                font-size: 16px;
+            }
+
+            .hero-image img,
+            .rozi-name {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-content h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 style="font-size: 36px;">Welcome To WellvichAAr</h1>
+            <h2 style="color: #dab968; font-size: 26px;">At Well Vichaar, our uniqueness lies in our empathetic and holistic approach to mental wellness.</h2>
+            <a href="counselling.html" class="contact-button" style="font-weight: bold;">Counselling Start</a>
         </div>
-    </div>
-</section>
+        <div class="hero-image">
+            <img src="images/rozi-removebg-preview.png" alt="Rozi's Image" class="rozi-image">
+            <div class="rozi-name">
+                <h1 style="font-size: 36px;">Meet Miss. Rozi</h1>
+                <h2 style="font-size: 26px; color: #dab968;">Founder and Co of WellvichAAr</h2>
+            </div>
+        </div>
+    </section>
 
-<!-- about us end -->
+
+    <!-- Hero end -->
+
+
+    <!-- about us start -->
+
+    <style>
+        .aboutus-section {
+            min-height: 490px;
+            background-color: #126796;
+            color: white;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            font-family: "Gothic A1", sans-serif;
+            padding: 20px;
+        }
+
+        .aboutus-container {
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .aboutus-content {
+            text-align: center;
+        }
+
+        .aboutus-content h1 {
+            color: #dab968;
+            font-size: 37px;
+            margin: 5px 0;
+        }
+
+        .aboutus-content h2 {
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        .aboutus-content p {
+            text-align: center;
+            white-space: pre-wrap;
+            transition-timing-function: ease;
+            transition-duration: 1.5s;
+            transition-delay: 0.12093s;
+            font-size: 22px;
+            line-height: 35px;
+            color: #b2dfdb;
+            margin-bottom: 20px;
+        }
+
+        .aboutus-content button {
+            background-color: #ffffff;
+            font-size: 16px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .aboutus-content button:hover {
+            background-color: #126796;
+            border-radius: 5px;
+            color: #ffffff;
+            border: solid 1px #ffffff;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .aboutus-content h1 {
+                font-size: 28px;
+                margin: 4px 0;
+            }
+
+            .aboutus-content h2 {
+                font-size: 22px;
+                color: #ffffff;
+            }
+
+            .aboutus-content p {
+                text-align: start;
+                font-size: 14px;
+                line-height: 20px;
+                color: #b2dfdb;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+    <section id="about" class="aboutus-section">
+        <div class="aboutus-container">
+            <div class="aboutus-content">
+                <h2 style="color: #dab968; font-size: 26px;">About Us</h2>
+                <h1 style="font-size: 36px; color: white;">Welcome to Well Vichaar, your sanctuary for mental wellness
+                    and personal growth<span style="color: #dab968;">.</span></h1>
+                <p>At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led by a compassionate team of
+                    RCI Certified Clinical psychologists, counseling psychologists, and top-tier psychiatrists, we offer
+                    a haven for those seeking clarity, healing, and renewal.
+
+                    Let us be your partners in growth, your champions of resilience, and your guides to a brighter, more
+                    fulfilling tomorrow.Choose WellvichAAr—the right place for your journey to well-being.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us end -->
 
 
     <!-- rozi intro start -->
-    <section
-    style="display: block; margin: 0px; height: auto; padding: 20px; box-sizing: border-box; width: 100%; background-color: white; background-image: url('images/Background+Wave+Right.jpg'); background-size: cover; background-position: center;"
-    id="doctor3">
-    <div class="container" style="max-width: 1400px; margin: 0 auto;">
-        <div class="rozi-about">
-            <div class="about-rozi-content-left">
-                <div>
-                    <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image" />
-                    <h3>Meet Miss. Rozi</h3>
-                    <h2>Founder and Co of WellvichAAr</h2>
+    <!-- <section
+        style="display: block; margin: 0px; height: auto; padding: 20px; box-sizing: border-box; width: 100%; background-color: white; background-image: url('images/Background+Wave+Right.jpg'); background-size: cover; background-position: center;"
+        id="doctor3">
+        <div class="container" style="max-width: 1400px; margin: 0 auto;">
+            <div class="rozi-about">
+                <div class="about-rozi-content-left">
+                    <div>
+                        <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image" />
+                        <h3>Meet Miss. Rozi</h3>
+                        <h2>Founder and Co of WellvichAAr</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="about-rozi-content">
-                <p>
-                    Rozi is a Counseling Psychologist with a postgraduate degree in
-                    psychology and extensive training in guidance and counseling. As
-                    a certified hypnotherapist, she offers a diverse range of skills
-                    to support individuals in their mental health journeys.
-                </p>
-                <div class="extra-text">
+                <div class="about-rozi-content">
                     <p>
-                        Rozi specializes in providing exceptional care and tailored
-                        treatment plans for children, adolescents, and adults. Her
-                        expertise includes psychometric testing, Cognitive Behavioral
-                        Therapy (CBT), Rational Emotive Behavior Therapy (REBT), and
-                        Hypnotherapy. She is proficient in conducting mental status
-                        examinations, taking detailed case histories, and developing
-                        effective interventions.
+                        Rozi is a Counseling Psychologist with a postgraduate degree in
+                        psychology and extensive training in guidance and counseling. As
+                        a certified hypnotherapist, she offers a diverse range of skills
+                        to support individuals in their mental health journeys.
                     </p>
-                    <p>
-                        Her approach is compassionate and solution-oriented, focusing
-                        on building strong, trusting relationships with clients.
-                        Recognized for her ability to motivate, communicate, and
-                        manage diverse personalities, Rozi excels in diffusing
-                        stressful situations and achieving challenging goals.
-                    </p>
-                    <p>
-                        Rozi is passionate about making a positive impact in the field
-                        of clinical psychology and looks forward to supporting you on
-                        your path to mental wellness.
-                    </p>
+                    <div class="extra-text">
+                        <p>
+                            Rozi specializes in providing exceptional care and tailored
+                            treatment plans for children, adolescents, and adults. Her
+                            expertise includes psychometric testing, Cognitive Behavioral
+                            Therapy (CBT), Rational Emotive Behavior Therapy (REBT), and
+                            Hypnotherapy. She is proficient in conducting mental status
+                            examinations, taking detailed case histories, and developing
+                            effective interventions.
+                        </p>
+                        <p>
+                            Her approach is compassionate and solution-oriented, focusing
+                            on building strong, trusting relationships with clients.
+                            Recognized for her ability to motivate, communicate, and
+                            manage diverse personalities, Rozi excels in diffusing
+                            stressful situations and achieving challenging goals.
+                        </p>
+                        <p>
+                            Rozi is passionate about making a positive impact in the field
+                            of clinical psychology and looks forward to supporting you on
+                            your path to mental wellness.
+                        </p>
+                    </div>
+                    <button class="show-more" onclick="toggleText()">
+                        Know More
+                    </button>
                 </div>
-                <button class="show-more" onclick="toggleText()">
-                    Know More
-                </button>
             </div>
         </div>
-    </div>
-</section>
+    </section> -->
 
 
-<style>
- /* General styles */
-.rozi-about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    overflow: hidden;
-}
-
-.about-rozi-content-left,
-.about-rozi-content {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.rozi-image {
-    width: 90%; /* Increased width to make the image larger */
-    max-width: 750px; /* Adjusted max-width */
-    height: auto;
-    border-radius: 10px;
-}
-
-h3 {
-    width: 100%;
-    /* margin-bottom: 10px; Reduced margin */
-    font-size: 1.2em; /* Reduced font size */
-    color: #dab968;
-}
-
-h2 {
-    font-size: 1.5em; /* Reduced font size */
-    color: #126796;
-}
-
-/* Styles for larger screens */
-@media (min-width: 769px) {
-    .rozi-about {
-        flex-direction: row;
-    }
-
-    .extra-text {
-        display: block !important;
-    }
-
-    .show-more {
-        display: none !important;
-    }
-}
-
-/* Styles for smaller screens */
-@media (max-width: 768px) {
-    .rozi-about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .extra-text {
-        display: none;
-    }
-
-    .show-more {
-        display: inline-block;
-        color: white;
-        background-color: #126796;
-        border: 1px solid #126796;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .show-more:hover {
-        color: #126796;
-        background-color: white;
-    }
-}
-
-</style>
-
-<script>
-    function toggleText() {
-        const extraText = document.querySelector('.extra-text');
-        const button = document.querySelector('.show-more');
-        if (extraText.style.display === 'block' || extraText.style.display === '') {
-            extraText.style.display = 'none';
-            button.textContent = 'Know More';
-        } else {
-            extraText.style.display = 'block';
-            button.textContent = 'Show Less';
+    <!-- <style>
+        /* General styles */
+        .rozi-about {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            overflow: hidden;
         }
-    }
 
-    function updateLayout() {
-        const extraText = document.querySelector('.extra-text');
-        const button = document.querySelector('.show-more');
-        if (window.innerWidth <= 768) {
-            extraText.style.display = 'none';
-            button.style.display = 'inline-block';
-            button.textContent = 'Know More';
-        } else {
-            extraText.style.display = 'block';
-            button.style.display = 'none';
+        .about-rozi-content-left,
+        .about-rozi-content {
+            padding: 20px;
+            box-sizing: border-box;
         }
-    }
 
-    window.addEventListener('resize', updateLayout);
-    window.addEventListener('load', updateLayout);
-</script>
+        .rozi-image {
+            width: 90%;
+            /* Increased width to make the image larger */
+            max-width: 750px;
+            /* Adjusted max-width */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h3 {
+            width: 100%;
+            /* margin-bottom: 10px; Reduced margin */
+            font-size: 1.2em;
+            /* Reduced font size */
+            color: #dab968;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            /* Reduced font size */
+            color: #126796;
+        }
+
+        /* Styles for larger screens */
+        @media (min-width: 769px) {
+            .rozi-about {
+                flex-direction: row;
+            }
+
+            .extra-text {
+                display: block !important;
+            }
+
+            .show-more {
+                display: none !important;
+            }
+        }
+
+        /* Styles for smaller screens */
+        @media (max-width: 768px) {
+            .rozi-about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .extra-text {
+                display: none;
+            }
+
+            .show-more {
+                display: inline-block;
+                color: white;
+                background-color: #126796;
+                border: 1px solid #126796;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .show-more:hover {
+                color: #126796;
+                background-color: white;
+            }
+        }
+    </style> -->
+
+    <!-- <script>
+        function toggleText() {
+            const extraText = document.querySelector('.extra-text');
+            const button = document.querySelector('.show-more');
+            if (extraText.style.display === 'block' || extraText.style.display === '') {
+                extraText.style.display = 'none';
+                button.textContent = 'Know More';
+            } else {
+                extraText.style.display = 'block';
+                button.textContent = 'Show Less';
+            }
+        }
+
+        function updateLayout() {
+            const extraText = document.querySelector('.extra-text');
+            const button = document.querySelector('.show-more');
+            if (window.innerWidth <= 768) {
+                extraText.style.display = 'none';
+                button.style.display = 'inline-block';
+                button.textContent = 'Know More';
+            } else {
+                extraText.style.display = 'block';
+                button.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', updateLayout);
+        window.addEventListener('load', updateLayout);
+    </script> -->
 
 
 
@@ -280,7 +627,7 @@ h2 {
     <!-- doctor one start  -->
 
 
-    <style>
+    <!-- <style>
         @media (max-width: 768px) {
             #doctor1 .container {
                 flex-direction: column;
@@ -295,10 +642,10 @@ h2 {
                 padding: 2px;
             }
         }
-    </style>
+    </style> -->
 
 
-    <section id="doctor1" style="background-color: #f3f1e7; padding: 20px;">
+    <!-- <section id="doctor1" style="background-color: #f3f1e7; padding: 20px;">
         <div class="container" style="display: flex; flex-wrap: wrap; align-items: start; justify-content: center;">
             <div class="image-container" style="flex: 1 1 300px; text-align: center; margin-bottom: 1px;">
                 <img src="./images/IMG_20240522_185726_page-0001.jpg" alt="Dr. Pragati Aggarwal"
@@ -320,7 +667,7 @@ h2 {
                     With An NGO. I Define Myself As A Social, Communicative And Empathetic Individual.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- doctor one end -->
 
@@ -506,180 +853,151 @@ h2 {
     <!-- start OUR SERVICES -->
 
     <style>
-        .services {
-            min-height: 400px;
-            background-size: cover;
-            background-image: url("images/Background+Wave+Right.jpg");
-            background-position: right;
-            background-repeat: no-repeat;
+        .services-section {
             text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px 10px;
-            overflow: hidden;
+            background-color: #fff;
+            padding: 120px 20px;
         }
 
-        .service-box-container {
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .services h2 {
-            font-size: 16px;
-            color: #e7cb80;
-        }
-
-        .services h1 {
-            font-size: 26px;
+        .services-section h1,
+        .services-section h2 {
             color: #126796;
+            margin-bottom: 20px;
         }
 
-        .service-boxes {
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            flex-wrap: wrap;
-            /* Allow flex items to wrap to the next line */
-            margin-top: 20px;
-        }
-
-        .service-box {
-            background-color: white;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+        }
+
+        .service-item {
+            border: 2px solid #c2c2c2;
+            padding: 0;
             border-radius: 8px;
-            border: 1px solid #126796;
-            margin: 0 10px;
-            box-sizing: border-box;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .service-box img {
-            width: 100px;
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for all images */
+            object-fit: cover;
+            /* Ensures images cover the area without distortion */
+            display: block;
         }
 
-        .service-box img:hover {
-            transform: scale(1.5);
-            transition: 0.45s;
-        }
-
-        .service-number {
-            font-size: 20px;
-            color: #dab968;
-            font-weight: bold;
-        }
-
-        .service-box h3 {
-            font-style: normal;
-            font-weight: bold;
+        .service-item h2 {
+            background-color: #f3f3f3;
+            padding: 10px;
+            margin: 0;
             color: #126796;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .service-box p {
-            text-align: center;
-            color: #000;
-            font-size: 14px;
-        }
-
-        .service-box a {
-            color: #dab968;
+        .services-section a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #126796;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
-            .service-boxes {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-box {
-                width: 80%;
-                margin: 10px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .services h2 {
-                font-size: 14px;
-            }
-
-            .services h1 {
-                font-size: 20px;
-            }
-
-            .service-box {
-                width: 90%;
-                padding: 15px;
-            }
-
-            .service-box img {
-                width: 80px;
-            }
-
-            .service-number {
-                font-size: 18px;
-            }
-
-            .service-box h3 {
-                font-size: 18px;
-            }
-
-            .service-box p {
-                font-size: 12px;
+            .services-grid {
+                grid-template-columns: 1fr;
+                /* Ensure cards stack vertically on smaller screens */
             }
         }
     </style>
-    <section class="services" id="services">
-        <h2>OUR SERVICES</h2>
-        <h1>What We Offer<span style="color: #dab968;">.</span></h1>
 
-        <div class="service-box-container">
-            <div class="service-boxes">
-                <div class="service-box">
-                    <span class="service-number">01</span>
-                    <h3>SERVICE ONE</h3>
-                    <img src="images/individual.jpeg" alt="" srcset="service 1">
-                    <p style="font-weight: bold;">Individual Therapy</p>
-                    <p>Discover Your Inner Strength & Find Peace Through Individual Therapy.</p>
-                </div>
-                <div class="service-box">
-                    <span class="service-number">02</span>
-                    <h3>SERVICE TWO</h3>
-                    <img src="images/- Group Therapy.jpg" alt="" srcset="service 2">
-                    <p style="font-weight: bold;">Group Therapy</p>
-                    <p>Discover Strenth Through Transformating Group Therapy.</p>
-                </div>
-                <div class="service-box">
-                    <span class="service-number">03</span>
-                    <h3>SERVICE THREE</h3>
-                    <img src="images/Couples.avif" alt="" srcset="service 3">
-                    <p style="font-weight: bold;">Couples Therapy</p>
-                    <p>Reignite Your Love & Connection Through Couples Therapy.</p>
-                </div>
-                <div class="service-box">
-                    <span class="service-number">04</span>
-                    <h3>SERVICE FOUR</h3>
-                    <img src="images/Family.jpg" alt="" srcset="service 4">
-                    <p style="font-weight: bold;">Family Therapy</p>
-                    <p>Strenthen Bonds & Nurture A Family Through Family Therapy.</p>
-                </div>
-                <div class="service-box">
-                    <span class="service-number">05</span>
-                    <h3>SERVICE FIVE</h3>
-                    <img src="images/child.avif" alt="" srcset="service 5">
-                    <p style="font-weight: bold;">Child & Adolescent Therapy</p>
-                    <p>Discover & Express Their Feelings Through Child & Adolescent Therapy.</p>
-                </div>
+
+    <section class="services-section" id="services">
+        <h2 style="color: #dab968; font-size: 26px;">Our Services</h2>
+        <h1 style="font-size: 36px;">What I can help you with</h1>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="images/images (1).jpeg" alt="Stress Management">
+                <h2>Stress Management</h2>
             </div>
+            <div class="service-item">
+                <img src="images/images (2).jpeg" alt="Anxiety Issue">
+                <h2>Anxiety Issue</h2>
+            </div>
+            <div class="service-item">
+                <img src="images/main-qimg-6146ca5230dc65d769c7bc43980ea7e0-lq.jpeg" alt="Relationship Issues">
+                <h2>Relationship Issues</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (10).jpeg" alt="Goal Setting & Manifestation">
+                <h2>Goal Setting & Manifestation</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (9).jpeg" alt="Personal & Professional Growth">
+                <h2>Personal & Professional Growth</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (8).jpeg" alt="Low motivation & Energy">
+                <h2>Low motivation & Energy</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (7).jpeg" alt="Sleep Issues">
+                <h2>Sleep Issues</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (6).jpeg" alt="Emotional Stability">
+                <h2>Emotional Stability</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (11).jpeg" alt="Career Management">
+                <h2>Career Management</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (3).jpeg" alt="Work-Life Balance">
+                <h2>Work-Life Balance</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (5).jpeg" alt="Low Self Esteem and Confidence">
+                <h2>Low Self Esteem and Confidence</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (4).jpeg" alt="Post Traumatic Stress">
+                <h2>Post Traumatic Stress</h2>
+            </div>
+
         </div>
+        <a href="counselling.html">Let's Find Out What Are You Struggling With →</a>
     </section>
+
+
     <!-- End OUR SERVICES -->
 
 
 
     <!-- doctor two start  -->
 
-
+    <!-- 
     <style>
         @media (max-width: 768px) {
             #doctor2 .container {
@@ -724,7 +1042,7 @@ h2 {
                     Testament To Her Enduring Impact Within The Field Of Psychology.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- doctor two end -->
 
@@ -786,15 +1104,19 @@ h2 {
 
 
     <section class="book-section">
-        <h2>Start Your Journey</h2>
-        <h1>Book A Session</h1>
-        <h4 style="color: white;"><del>₹ 5,999/-</del></h4>
-        <h2 style="color: #dab968;">₹ 4,500/-</h2>
-        <p style="color: white;"><i class="far fa-check-circle" style="color: #dab968;"></i> No. of Sessions : 1</p>
-        <p style="color: white;"><i class="far fa-clock" style="color: #dab968;"></i></i> Session Duration : 50 minutes</p>
-        <p style="color: white;"><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i>     Mode: Video or Audio</p>
-        <p style="color: white;"><i class="fas fa-shield-alt" style="color: #dab968"></i> Completely Confidential</p>
-        <a href="book.html" class="book-button"><i class="fas fa-hand-holding-heart" style="color: #dab968"></i> Start Counselling</a>
+        <h1 style="font-size: 36px; color: white;">Start Your Journey</h1>
+        <h2 style="font-size: 26px; color: #dab968;">Book A Session</h2>
+        <h3 style="color: white;"><del>₹ 2,999/-</del></h3>
+        <h2 style="color: #dab968; font-size: 26px;">₹ 1,500/-</h2>
+        <p style="color: white; font-weight: bold;"><i class="far fa-check-circle" style="color: #dab968;"></i> No. of Sessions : 1</p>
+        <p style="color: white; font-weight: bold;"><i class="far fa-clock" style="color: #dab968;"></i></i> Session Duration : 60 minutes
+        </p>
+        <p style="color: white; font-weight: bold;"><i class="fas fa-chalkboard-teacher" style="color: #dab968;"></i> Mode: Video or Audio
+        </p>
+        <p style="color: white; font-weight: bold;"><i class="fas fa-shield-alt" style="color: #dab968" ></i> Completely Confidential</p>
+        <a href="counselling.html" class="book-button" style="font-weight: bold;"><i class="fas fa-hand-holding-heart" style="color: #dab968; "></i>
+            Start
+            Counselling</a>
 
     </section>
 
@@ -802,207 +1124,234 @@ h2 {
     <!-- Book end -->
 
 
-    <!-- Our Specializations start -->
+    <!-- What Makes us Unique? start -->
 
     <style>
-        .specializations {
-            min-height: 400px;
-            background-image: url("images/Background+Wave+Left.jpg");
-            background-position: left;
-            background-repeat: no-repeat;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px 10px;
-            overflow: hidden;
-        }
-
-        .specializations-box-container {
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .specializations h2 {
-            font-size: 16px;
-            color: #e7cb80;
-        }
-
-        .specializations-box img {
-            width: 100px;
-        }
-
-        .specializations-box img:hover {
-            transform: scale(1.5);
-            transition: 0.45s;
-        }
-
-        .specializations h1 {
-            font-size: 26px;
+        .unique-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #f3f1e7;
             color: #126796;
         }
 
-        .specializations-boxes {
+        .unique-content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .icons {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            width: 100%;
         }
 
-        .specializations-box {
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            border-radius: 8px;
-            border: 1px solid #126796;
-            margin: 10px;
-            flex: 1 1 300px;
-            max-width: 300px;
-        }
-
-        .specializations-number {
-            font-size: 20px;
-            color: #dab968;
-            font-weight: bold;
-        }
-
-        .specializations-box h3 {
-            font-style: normal;
-            font-weight: bold;
-            color: #126796;
-        }
-
-        .specializations-box p {
+        .icon-item {
+            width: 33.33%;
+            /* Adjust width for three items per row */
+            padding: 12px;
             text-align: center;
-            color: #000;
-            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Ensures vertical center alignment */
         }
 
-        .specializations-box a {
-            color: #dab968;
-            text-decoration: none;
+        .icon-item p {
+            color: #126796;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 39px;
+            color: white;
+            padding: 12px;
+            border-radius: 18px;
+            background-color: #dab968;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .icon-item:hover i {
+            color: black;
+            background-color: #ffffff;
+        }
+
+        .unique-image {
+            width: 45%;
+            display: flex;
+            align-items: center;
+        }
+
+        .unique-image img {
+            width: 100%;
+            height: auto;
         }
 
         @media (max-width: 768px) {
-            .specializations h1 {
-                font-size: 22px;
+            .unique-section {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .specializations-box img {
-                width: 80px;
-            }
-
-            .specializations h2 {
-                font-size: 14px;
-            }
-
-            .specializations-boxes {
-                gap: 10px;
-            }
-
-            .specializations-box {
-                width: 90%;
-                max-width: none;
-                flex: 1 1 calc(100% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .specializations h1 {
-                font-size: 20px;
-            }
-
-            .specializations h2 {
-                font-size: 12px;
-            }
-
-            .specializations-box {
+            .unique-content,
+            .unique-image {
                 width: 100%;
-                padding: 15px;
             }
 
-            .specializations-number {
-                font-size: 18px;
-            }
-
-            .specializations-box h3 {
-                font-size: 16px;
-            }
-
-            .specializations-box p {
-                font-size: 12px;
+            .icon-item {
+                width: 100%;
+                /* Full width on smaller screens */
             }
         }
     </style>
 
+    <section class="unique-section" id="specializations">
+        <div class="unique-content">
+            <h2 style="color: #dab968; font-size: 26px;">Our Specializations</h2>
+            <h1 style="font-size: 36px;">What Makes Me Unique?</h1>
+            <div class="icons"> <!-- This will contain all icon items -->
+                <div class="icon-item">
+                    <p><i class="fas fa-user-shield"></i> Individual Consultation</p>
+                </div>
+                <div class="icon-item">
+                    <p><i class="fas fa-shield-alt"></i> Completely Confidential</p>
+                </div>
+                <div class="icon-item">
+                    <p><i class="fas fa-heartbeat"></i> Personalised Approach</p>
+                </div>
+                <div class="icon-item">
+                    <p><i class="fas fa-search"></i> Evidence Based Therapies</p>
+                </div>
+                <div class="icon-item">
+                    <p><i class="fas fa-user-md"></i> RCI certified clinical psychologist</p>
+                </div>
+                <div class="icon-item">
+                    <p><i class="fas fa-user-tie"></i> Top tier psychiatrist</p>
+                </div>
+            </div>
+        </div>
+        <div class="unique-image">
+            <img src="images/say-transformed_(1)-transformed.webp" alt="Therapy Session">
+        </div>
+    </section>
 
-    <section class="specializations" id="specializations">
-        <h2>Our Specializations</h2>
-        <h1>What makes us unique <span style="color: #dab968;">.</span></h1>
 
-        <div class="specializations-box-container">
-            <div class="specializations-boxes">
-                <div class="specializations-box">
-                    <span class="specializations-number">01</span>
-                    <h3>SPECIALIZATION ONE</h3>
-                    <img src="images/greif.jpg" alt="">
-                    <h2 style="font-weight: bolder;">individual consultation</h2>
-                    <p>Discover To Help People Navigate This Complex Process And Learn How To Grieve In A Healthy Way.
-                    </p>
+
+    <!--  What Makes us Unique? end -->
+
+    <!-- step section start -->
+    <style>
+        .steps-section {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            padding: 40px 20px;
+        }
+
+        .steps-section h1 {
+            color: #126796;
+            margin-bottom: 20px;
+            /* Reduced bottom margin */
+            font-size: 36px;
+            /* Responsive font size */
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            /* Allows items to wrap on smaller screens */
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            /* This width could be adjusted based on design preference */
+            padding: 10px;
+            /* Adds padding for better spacing */
+        }
+
+        .icon-container {
+            background-color: #dab968;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 10px;
+            /* Spacing between icon and text */
+        }
+
+        .icon-container:hover {
+            background-color: #f3f1e7;
+            color: black;
+        }
+
+        .step p {
+            color: #333;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            /* Ensures text is centered */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .steps-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .steps-section h1 {
+                font-size: 28px;
+                /* Slightly smaller font size for smaller screens */
+            }
+
+            .step p {
+                font-size: 18px;
+                /* Smaller text to better fit narrow screens */
+            }
+        }
+    </style>
+
+    <section class="steps-section">
+        <h1>Start Therapy in 3 easy steps</h1>
+        <div class="steps-container">
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">02</span>
-                    <h3>SPECIALIZATION TWO</h3>
-                    <img src="images/anxiety.avif" alt="">
-                    <h2 style="font-weight: bolder;">Anxiety & Depression</h2>
-                    <p>Discover 'Self-Talk', Reality Testing, Attention Training, Cognitive Challenging And Cognitive
-                        Restructuring.</p>
+                <p style="font-size: 15px;">01</p><p style="font-size: 22px; font-weight: bold;">Enrol for the Session</p>
+            </div>
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fas fa-calendar-check"></i>
                 </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">03</span>
-                    <h3>SPECIALIZATION THREE</h3>
-                    <img src="images/Phobia.jpg" alt="">
-                    <h2 style="font-weight: bolder;">Phobia Treatment</h2>
-                    <p>Relaxation Techniquest That Help You Cope With Physical Symptoms Very Effective For Treating
-                        Phobias.</p>
+                <p style="font-size: 15px;">02</p><p style="font-size: 22px; font-weight: bold;">Schedule appointment</p>
+            </div>
+            <div class="step">
+                <div class="icon-container">
+                    <i class="fas fa-video"></i>
                 </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">04</span>
-                    <h3>SPECIALIZATION FOUR</h3>
-                    <img src="images/stress.jpg" alt="">
-                    <h2 style="font-weight: bolder;">Stress Management</h2>
-                    <p>Stress Management Offers A Range Of Ways To Help You Better Deal With Stress And Difficulty, Also
-                        Called Adversity, In Your Life.</p>
-                </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">05</span>
-                    <h3>SPECIALIZATION FIVE</h3>
-                    <img src="images/positive.avif" alt="">
-                    <h2 style="font-weight: bolder;">Positive Psychology</h2>
-                    <p>Positive Psychology Is The Scientific Study Of Human Flourishing, And An Applied Approach To
-                        Optimal Functioning.</p>
-                </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">06</span>
-                    <h3>SPECIALIZATION SIX</h3>
-                    <img src="images/Hypno.jpg" alt="">
-                    <h2 style="font-weight: bolder;">Hypnotherapy</h2>
-                    <p>Hypnosis Is A Changed State Of Awareness And Increased Relaxation That Allows For Improved Focus
-                        And Concentration.</p>
-                </div>
-                <div class="specializations-box">
-                    <span class="specializations-number">07</span>
-                    <h3>SPECIALIZATION SEVEN</h3>
-                    <img src="images/Expressive.avif" alt="">
-                    <h2 style="font-weight: bolder;">Expressive Art Therapy</h2>
-                    <p>Expressive Arts Therapy Uses Many Different Forms Of Art Making Processes And A Collaborative
-                        Approach To Help People Creatively Express Themselves.</p>
-                </div>
+                <p style="font-size: 15px;">03</p><p style="font-size: 22px; font-weight: bold;">Join the call at the scheduled time.</p>
             </div>
         </div>
     </section>
 
-    <!-- Our Specializations end -->
+
+
+
+    <!-- step section end -->
 
 
     <!-- contact us start-->
@@ -1012,27 +1361,50 @@ h2 {
             background-color: #126796;
             padding: 20px;
             text-align: center;
+            padding-top: 25px;
+            /* Add margin to top and bottom as specified */
+            padding-bottom: 25px;
         }
 
         .contact-section h1 {
             color: #dab968;
+            /* Make the main heading stand out */
+            font-size: 36px;
+            /* Ensure size is large enough for emphasis */
             margin-bottom: 20px;
         }
 
-        .contact-section h2,
-        .contact-section h3,
-        .contact-section .contact-button {
+        .contact-section h2 {
             color: white;
+            font-size: 22px;
+            /* Slightly larger for better readability */
+            margin-bottom: 15px;
+            /* Consistent spacing */
+        }
+
+        .contact-section h3 {
+            color: white;
+            font-size: 20px;
+            /* Slightly smaller than h2 */
             margin-bottom: 10px;
         }
 
         .contact-section .contact-button {
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            /* display: inline-block; */
+            background-color: transparent;
+            /* Ensures readability and style */
+            padding: 12px 24px;
             border: 2px solid white;
-            transition: color 0.3s, border-color 0.3s;
+            border-radius: 5px;
+            /* Rounded corners for the button */
+            font-weight: bold;
+            /* Makes the button text stand out */
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            /* Corrected to ensure proper spacing */
+            text-decoration: none;
+            cursor: pointer;
+            /* Makes it clear the button is clickable */
         }
 
         .contact-section .contact-button:hover {
@@ -1042,21 +1414,26 @@ h2 {
         }
 
         /* Responsive Styles */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 20px 10px;
+                /* Adjust padding for smaller screens */
+            }
+
             .contact-section h1 {
-                font-size: 24px;
+                font-size: 28px;
+                /* Smaller font size for small devices */
             }
 
-            .contact-section h2 {
-                font-size: 18px;
-            }
-
+            .contact-section h2,
             .contact-section h3 {
-                font-size: 16px;
+                font-size: 18px;
+                /* Reduce the font size to fit smaller screens */
             }
 
             .contact-section .contact-button {
-                padding: 8px 16px;
+                padding: 10px 20px;
+                /* Adjust button padding on small devices */
             }
         }
     </style>
@@ -1064,11 +1441,11 @@ h2 {
 
 
     <section class="contact-section">
-        <h2>GET IN TOUCH</h2>
-        <h1>Contact Information.</h1>
-        <h3>Email: wellvichaar@gmail.Com</h3>
-        <h3>Phone: +91 85958 71247</h3>
-        <a href="contact.html" class="contact-button">Contact Us</a>
+        <h2 style="font-size: 26px; color: #dab968;">Contact Information.</h2>
+        <h1 style="font-size: 36px; color: white;">GET IN TOUCH</h1>
+        <h2>Email: wellvichaar@gmail.Com</h2>
+        <h2 style="margin-bottom: 20px;">Phone: +91 85958 71247</h2>
+        <a href="counselling.html" class="contact-button">Counselling Start</a>
     </section>
 
     <!-- contact us end -->
@@ -1078,7 +1455,7 @@ h2 {
 
     <!-- OUR RESULTS start -->
 
-    <style>
+    <!-- <style>
         .results {
             min-height: 400px;
             background-size: cover;
@@ -1236,11 +1613,151 @@ h2 {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
     <!-- OUR RESULTS end -->
+
+
+    <!-- contact form -->
+
+    <style>
+        .contact-form-section {
+            background-color: #f3f1e7;
+            color: #126796;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form-section .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section h2 {
+            color: #126796;
+        }
+
+        .contact-form-section p {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        textarea {
+            width: 48%;
+            /* Adjusts the width to fit 2 inputs per line */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            /* Full width for the textarea */
+            resize: none;
+            /* Disables resizing the textarea */
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #126796;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            border: solid 1px #126796;
+        }
+
+        .button:hover {
+            background-color: #f3f1e7;
+            color: #126796;
+            border: solid 1px #126796;
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                flex-direction: column;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            textarea {
+                width: 100%;
+                /* Full width for smaller devices */
+            }
+        }
+    </style>
+
+    <section class="contact-form-section">
+        <div class="container">
+            <h1 style="font-size: 36px;">Got Queries?</h1>
+            <p style="font-size: 26px; color: #dab968;">If you have any questions or want to reach out for events,
+                keynotes, and corporate queries. Please fill
+                out the form.</p>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="age" name="age" placeholder="Age">
+                    <input type="text" id="city" name="city" placeholder="City">
+                    <input type="text" id="profession" name="profession" placeholder="Profession">
+                </div>
+                <textarea id="message" name="message" placeholder="Message" rows="4"></textarea>
+                <input class="button" type="submit" value="submit" onclick="sendMail();">
+
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function sendMail() {
+            const fields = {
+                "First Name": document.getElementById('first-name').value,
+                "Last Name": document.getElementById('last-name').value,
+                "Email": document.getElementById('email').value,
+                "WhatsApp Number": document.getElementById('whatsapp').value,
+                "Age": document.getElementById('age').value,
+                "City": document.getElementById('city').value,
+                "Profession": document.getElementById('profession').value,
+                "Message": document.getElementById('message').value
+            };
+
+            let emailSubject = `New Query from ${fields["First Name"]} ${fields["Last Name"]}`;
+            let emailBody = "";
+
+            for (let key in fields) {
+                emailBody += `${key}: ${fields[key]}\n`;  // Append each field as key: value
+            }
+
+            const mailtoLink = `mailto:wellvichaar@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+
+
+    </script>
+
+
+
+    <!-- contact end -->
 
 
 
@@ -1248,22 +1765,22 @@ h2 {
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <h1>WellvichAAr</h1>
-                <p class="sub-title">Certified Clinical Mental Health Counselor</p>
+                <h1 style="font-size: 36px;">WellvichAAr</h1>
+                <h2 class="sub-title" style="font-size: 26px;">Certified Clinical Mental Health Counselor</h2>
             </div>
             <div class="footer-nav">
-                <a href="#about">About us</a>
+                <a href="#about" style="font-weight: bold;">About us</a>
                 <p>//</p>
-                <a href="#doctor1">Team</a>
+                <a href="counselling.html#team" style="font-weight: bold;">Team</a>
                 <p>//</p>
-                <a href="#specializations">Specializations</a>
+                <a href="#specializations" style="font-weight: bold;">Specializations</a>
                 <p>//</p>
-                <a href="#services">Services</a>
+                <a href="#services" style="font-weight: bold;">Services</a>
                 <p>//</p>
-                <a href="contact.html">Contact</a>
+                <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
             </div>
             <div class="footer-social">
-                <a href="#" aria-label="Facebook">
+                <a href="#" aria-label="Facebook" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                         <path
                             d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.655-4.785 1.323 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.309h3.588l-.467 3.622h-3.121v9.293h6.116c.731 0 1.324-.593 1.324-1.324v-21.35c0-.732-.593-1.325-1.324-1.325z" />
@@ -1283,11 +1800,11 @@ h2 {
                 </a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;"
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a style="color: #dab968;"
                         onmouseover="this.style.color='white'" onmouseout="this.style.color='#dab968'"
                         href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a>
                 </p>
-                <p><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
+                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
                         href="privacy-policy.html#terms">TERMS AND CONDITIONS</a></p>
             </div>
         </div>

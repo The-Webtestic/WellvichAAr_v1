@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counselling-WellvichAAr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- nav bar start -->
+
+
+    <style>
+        body {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0;
+            background-color: #f3f1e7;
+            overflow-x: hidden;
+
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vw 4vw;
+            background-color: #f3f1e7;
+            color: #126796;
+            font-weight: bold;
+        }
+
+        .nav-container .logo img {
+            max-height: 75px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links :hover {
+            text-decoration: underline 8px #126796;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            font-size: 24px;
+            color: #126796;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #126796;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-content a:hover {
+            color: white;
+            font-weight: bold;
+        }
+
+        .dropdown-content li {
+            list-style-type: none;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Social Media Links */
+        .social-media-links {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .social-media-links a {
+            margin-left: 10px;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            border-radius: 30%;
+        }
+
+        .contact-button {
+            background-color: #126796;
+            padding: 10px 10px;
+            border: 1px solid #126796;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-button:hover {
+            background-color: #f3f1e7;
+            border: solid 1px #126796;
+            color: #126796;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+
+            .nav-links,
+            .dropdown-content {
+                display: none;
+                /* Initially hide */
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: #f3f1e7;
+                position: absolute;
+                top: 80px;
+                left: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .social-media-links {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+                /* Spacing after the nav links */
+            }
+
+            .contact-button {
+                display: block;
+                margin-top: 20px;
+                /* Spacing after social media links */
+                width: auto;
+                /* Adjust width to content */
+            }
+        }
+    </style>
+    <nav>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navLinks = document.querySelector(".nav-links");
+
+                menuToggle.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
+            });
+        </script>
+
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <span>&#9776;</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <div class="dropdown">
+                    <a href="counselling.html#team">Our Team</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#Clinical Psychologist">Clinical Psychologists</a></li>
+                        <li><a href="#Counseling Psychologist">Counseling Psychologists1</a></li>
+                    </ul>
+                </div>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#specializations">Specializations</a>
+                <div class="social-media-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter" style="padding: 15px; border-radius: 50%;"></i>
+                    </a>
+                </div>
+                <a href="counselling.html" style="color: white;" onmouseover="this.style.color='#126796'"
+                    onmouseout="this.style.color='white'" class="contact-button">Start Counselling</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav bar end -->
+
+
+    <!-- Hero start -->
+
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f3f1e7;
+            padding: 2% 5%;
+            box-sizing: border-box;
+        }
+
+        .hero-content {
+            flex: 1 1 50%;
+            /* half of the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            color: #126796;
+            /* specified blue color */
+            font-family: 'Century Gothic', sans-serif;
+            font-size: 2.5rem;
+            /* scaled down for better responsiveness */
+            margin-bottom: 10px;
+        }
+
+        .hero-content h3 {
+            color: #dab968;
+            /* specified gold color */
+            font-size: 1.5rem;
+            /* scaled down for better responsiveness */
+            margin-bottom: 20px;
+        }
+
+        .hero-content a {
+            background-color: #045D64;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            display: inline-block;
+            /* ensures the button doesn't take up full width */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero-content a:hover {
+            background-color: #f3f1e7;
+            color: #126796;
+            border: 1px solid #126796;
+        }
+
+        .hero-image {
+            flex: 1 1 50%;
+            /* half of the available space */
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content,
+            .hero-image {
+                flex: 1 1 100%;
+                /* full width */
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                /* slightly smaller on smaller screens */
+            }
+
+            .hero-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Start your Therapeutic Journey By Choosing A Plan That’s Right For You</h1>
+            <h3>Sessions tailored as per your needs
+                Fostering Healing, Growth and Resilience.</h3>
+        </div>
+        <div class="hero-image">
+            <img src="images/banner-girl-01-01-1024x1024.png" alt="girl banner" class="girl-banner" />
+        </div>
+    </section>
+
+    <!-- hero end -->
+
+
+
+    <!-- card start -->
+
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #126796;
+            padding: 50px;
+        }
+
+        .card {
+            border: 2px dashed #c2c2c2;
+            border-radius: 10px;
+            background-color: #f3f1e7;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-out;
+            /* Updated to include transform in transition */
+        }
+
+        .card:hover {
+            border-color: #dab968;
+            /* Change border color on hover */
+            box-shadow: 0px 8px 16px rgba(46, 204, 113, 0.6);
+            /* Greenish shadow on hover */
+            transform: scale(1.05);
+            /* Scale up the card for 3D effect */
+        }
+
+        .card-title {
+            background-color: #126796;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            font-size: 24px;
+            margin: -20px -20px 20px -20px;
+        }
+
+        .card p {
+            font-weight: 600;
+            font-size: 19px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .price-button {
+            background-color: #126796;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .price-button:hover {
+            background-color: #dab968;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <section>
+        <div class="card-container">
+            <div class="card">
+                <h2 class="card-title">Heal</h2>
+                <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 4</p>
+                <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
+                <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 60 days</p>
+                <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
+                <button class="price-button">INR 18,000/-</button>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Know</h2>
+                <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 1</p>
+                <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
+                <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 14 days</p>
+                <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
+                <button class="price-button">INR 4,500/-</button>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Empower</h2>
+                <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 8</p>
+                <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
+                <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 120 days</p>
+                <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
+                <button class="price-button">INR 36,000/-</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- card end -->
+
+    <!-- feature start -->
+
+    <style>
+        .features {
+            display: flex;
+            justify-content: center;
+            /* Center items */
+            flex-wrap: wrap;
+            /* Allow wrapping */
+            padding: 20px;
+            background-color: white;
+        }
+
+        .feature-card {
+            background-color: white;
+            width: 250px;
+            /* Width of each card */
+            text-align: center;
+            padding: 50px 20px;
+            /* 50px padding top and bottom, 20px left and right */
+            margin: 20px;
+            /* Space between cards */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Shadow for depth */
+            transition: transform 0.3s, background-color 0.3s;
+            /* Smooth transition for transform and background color */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            /* Lift card on hover */
+            background-color: #f3f1e7;
+            /* Light background color on hover */
+        }
+
+        .icon {
+            color: #dab968;
+            /* Initial color of icons */
+            font-size: 40px;
+            /* Icon size */
+            margin-bottom: 10px;
+            /* Space below the icon */
+            transition: color 0.3s;
+            /* Smooth transition for color change */
+        }
+
+        .icon:hover {
+            color: black;
+            /* Change icon color to black on hover */
+        }
+
+        .feature-card p {
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            /* Text size */
+            margin: 0;
+            /* No additional margin */
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-card {
+                width: 90%;
+                /* Take more width on smaller screens */
+                margin-bottom: 20px;
+                /* Space between stacked cards */
+            }
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            /* Ensure items are centered */
+            flex-wrap: wrap;
+            /* Allow items to wrap if needed */
+            padding: 40px;
+            /* Increased padding for more space inside the container */
+            background-color: white;
+        }
+
+        .feature-card {
+            background-color: white;
+            width: 250px;
+            /* Increase the width of each card */
+            text-align: center;
+            padding: 30px;
+            /* Increase padding inside each card for a larger appearance */
+            margin: 20px;
+            /* Increase margin to add space between cards */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            /* Slightly larger shadow for depth */
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            /* Slightly larger hover effect */
+        }
+
+        .icon {
+            color: #dab968;
+            font-size: 40px;
+            /* Larger icon size for better visibility */
+            margin-bottom: 10px;
+            /* Adjust margin to space out text from icon */
+        }
+
+        .feature-card p {
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            /* Increase font size for better readability */
+            margin: 0;
+            /* Remove additional margin */
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-card {
+                width: 90%;
+                /* Cards take up more width on smaller screens */
+                margin-bottom: 20px;
+                /* Sufficient space between stacked cards */
+                padding: 20px;
+                /* Adjust padding to better fit mobile screens */
+            }
+
+            .icon {
+                font-size: 36px;
+                /* Slightly smaller icons fit better on mobile */
+            }
+        }
+    </style>
+
+    <section>
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <p>Individual Sessions</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <p>Completely Confidential</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p>Personalised Approach</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <p>Evidence Based Therapies</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- feature end -->
+
+    <!-- our team start -->
+    <style>
+        .team-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f3f1e7;
+            padding: 10px;
+        }
+
+        .team {
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 25px;
+            border: 1px solid #126796;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            height: 100%;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            /* Added transition effects */
+        }
+
+        .team:hover {
+            transform: translateY(-10px) scale(1.05);
+            /* Moves up and scales for 3D effect */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            /* Enhances shadow to give depth */
+        }
+
+        .team img {
+            width: 90%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .team h1,
+        .team h2 {
+            width: 100%;
+            overflow-wrap: break-word;
+            margin: 5px 0;
+        }
+
+        .team h1 {
+            color: #126796;
+            font-size: 18px;
+        }
+
+        .team h2 {
+            color: #dab968;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .team-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team {
+                flex: 1 1 100%;
+                width: 80%;
+                max-width: 350px;
+            }
+
+            .team img {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <section class="team-wrapper" id="team">
+        <div class="team">
+            <img src="images/Pragati.jpg" alt="Pragati Aggarwal" id="Counseling Psychologist">
+            <h1>Meet Pragati Aggarwal</h1>
+            <h2>Counseling Psychologist</h2>
+        </div>
+
+        <div class="team">
+            <img src="images/Photo (1)_page-0001 (1).jpg" alt="Prachi Mittal" id="Clinical Psychologist">
+            <h1>Meet Prachi Mittal</h1>
+            <h2>Clinical Psychologist</h2>
+        </div>
+
+        <div class="team">
+            <img src="images/IMG_20240116_000031_474 (1).jpg" alt="Lorem Ipsum">
+            <h1>Lorem, ipsum.</h1>
+            <h2>Lorem, ipsum.</h2>
+        </div>
+    </section>
+
+
+
+    <!-- our team end -->
+
+    <!-- footer start -->
+
+    <style>
+        footer {
+            background-color: #126796;
+            color: #F8BF7D;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        .footer-logo p {
+            margin: 15px 0 20px;
+            font-size: 18px;
+            color: #dab969;
+        }
+
+
+        .footer-nav {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-nav p {
+            margin: 5px;
+            text-decoration: none;
+            color: #dab969;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin: 20px 0;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+        }
+
+        .footer-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-bottom p {
+            margin: 10px 0;
+        }
+
+        .footer-bottom a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1 style="font-size: 36px;">WellvichAAr</h1>
+                <p class="sub-title" style="font-size: 26px;">Certified Clinical Mental Health Counselor</p>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html#about" style="font-weight: bold;">About us</a>
+                <p>//</p>
+                <a href="#team" style="font-weight: bold;">Team</a>
+                <p>//</p>
+                <a href="index.html#specializations" style="font-weight: bold;">Specializations</a>
+                <p>//</p>
+                <a href="index.html#services" style="font-weight: bold;">Services</a>
+                <p>//</p>
+                <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.655-4.785 1.323 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.309h3.588l-.467 3.622h-3.121v9.293h6.116c.731 0 1.324-.593 1.324-1.324v-21.35c0-.732-.593-1.325-1.324-1.325z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.241 1.308 3.607.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.241 1.245-3.607 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.241-1.308-3.607-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.063-1.366.333-2.633 1.308-3.608.975-.975 2.241-1.245 3.607-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.013-4.947.072-1.421.065-2.687.333-3.75 1.396-1.064 1.064-1.331 2.33-1.396 3.75-.059 1.28-.072 1.688-.072 4.947s.013 3.667.072 4.947c.065 1.421.333 2.687 1.396 3.75 1.064 1.064 2.33 1.331 3.75 1.396 1.28.059 1.688.072 4.947.072s3.667-.013 4.947-.072c1.421-.065 2.687-.333 3.75-1.396 1.064-1.064 1.331-2.33 1.396-3.75.059-1.28.072-1.688.072-4.947s-.013-3.667-.072-4.947c-.065-1.421-.333-2.687-1.396-3.75-1.064-1.064-2.33-1.331-3.75-1.396-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.723 0-4.932 2.208-4.932 4.93 0 .386.044.763.127 1.124-4.096-.205-7.725-2.167-10.15-5.144-.424.724-.667 1.562-.667 2.457 0 1.694.863 3.188 2.175 4.066-.803-.026-1.56-.246-2.224-.616v.062c0 2.366 1.683 4.343 3.918 4.792-.41.111-.842.171-1.287.171-.315 0-.622-.03-.921-.086.623 1.944 2.432 3.357 4.576 3.395-1.675 1.312-3.784 2.096-6.075 2.096-.394 0-.779-.023-1.161-.068 2.165 1.388 4.735 2.2 7.504 2.2 9.005 0 13.928-7.465 13.928-13.928 0-.212-.004-.423-.014-.634.955-.69 1.784-1.55 2.437-2.532z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a
+                        style="color: #dab968;" onmouseover="this.style.color='white'"
+                        onmouseout="this.style.color='#dab968'"
+                        href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a>
+                </p>
+                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
+                        href="privacy-policy.html#terms">TERMS AND CONDITIONS</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end  -->
+
+</body>
+
+</html>
