@@ -392,7 +392,7 @@
         @media (max-width: 480px) {
 
             .hero-content h1,
-            .hero-content h2{
+            .hero-content h2 {
                 font-size: 16px;
                 /* Adjust if necessary */
                 padding: 0 10px;
@@ -401,7 +401,7 @@
                 /* Ensure text alignment is centered */
             }
 
-            .hero-content a{
+            .hero-content a {
                 font-size: 16px;
                 padding: 10px 10px;
                 text-align: center;
@@ -968,6 +968,18 @@
             /* Maintain six cards per row on large screens */
             gap: 20px;
             padding: 20px;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            /* Slightly enlarges the card on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Adds shadow for depth */
+        }
+
+        .service-item:hover img {
+            transform: scale(1.1);
+            /* Zooms the image slightly */
         }
 
         .service-item {
