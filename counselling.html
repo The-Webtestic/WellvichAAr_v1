@@ -391,7 +391,7 @@
             padding: 50px;
             flex-wrap: wrap;
         }
-    
+
         .card {
             border: 2px dashed #c2c2c2;
             border-radius: 10px;
@@ -402,13 +402,13 @@
             text-align: center;
             transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-out;
         }
-    
+
         .card:hover {
             border-color: #dab968;
             box-shadow: 0px 8px 16px rgba(46, 204, 113, 0.6);
             transform: scale(1.05);
         }
-    
+
         .card-title {
             background-color: #126796;
             color: white;
@@ -417,14 +417,14 @@
             font-size: 24px;
             margin: -20px -20px 20px -20px;
         }
-    
+
         .card p {
             font-weight: 600;
             font-size: 19px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;
         }
-    
+
         .price-button {
             background-color: #126796;
             color: white;
@@ -435,53 +435,53 @@
             font-weight: bold;
             transition: background-color 0.3s, transform 0.3s;
         }
-    
+
         .price-button:hover {
             background-color: #dab968;
             transform: scale(1.05);
         }
-    
+
         @media (max-width: 1200px) {
             .card-container {
                 padding: 40px;
             }
-    
+
             .card {
                 width: 80%;
             }
         }
-    
+
         @media (max-width: 768px) {
             .card-container {
                 flex-direction: column;
                 align-items: center;
                 padding: 30px;
             }
-    
+
             .card {
                 width: 90%;
             }
-    
+
             .icon {
                 font-size: 32px;
             }
         }
-    
+
         @media (max-width: 480px) {
             .card-container {
                 padding: 20px;
             }
-    
+
             .card {
                 width: 100%;
             }
-    
+
             .icon {
                 font-size: 28px;
             }
         }
     </style>
-    
+
     <section>
         <div class="card-container">
             <div class="card">
@@ -621,107 +621,127 @@
     <style>
         .features {
             display: grid;
-            grid-template-columns: repeat(6, 1fr); /* Six cards per row on large screens */
+            grid-template-columns: repeat(6, 1fr);
+            /* Six cards per row on large screens */
             justify-items: center;
             gap: 20px;
-            padding: 120px 150px; /* Padding for large screens */
+            padding: 120px 150px;
+            /* Padding for large screens */
             background-color: white;
             overflow: hidden;
-            width: 100% ;
+            width: 100%;
         }
-    
+
         .feature-card {
             background-color: white;
             width: 250px;
             text-align: center;
-            padding: 50px 20px; /* Padding inside the card */
+            padding: 50px 20px;
+            /* Padding inside the card */
             margin: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, background-color 0.3s;
         }
-    
+
         .feature-card:hover {
             transform: translateY(-5px);
             background-color: #f3f1e7;
         }
-    
+
         .icon {
             color: #dab968;
-            font-size: 40px; /* Initial icon size for large screens */
+            font-size: 40px;
+            /* Initial icon size for large screens */
             margin-bottom: 10px;
             transition: color 0.3s;
         }
-    
+
         .icon:hover {
             color: black;
         }
-    
+
         .feature-card p {
             color: #333;
             font-size: 18px;
             margin: 0;
         }
-    
+
         /* Medium Screens: 1200px and below */
         @media (max-width: 1200px) {
             .features {
-                grid-template-columns: repeat(4, 1fr); /* Four cards per row */
-                padding: 100px 100px; /* Reduced padding for medium screens */
+                grid-template-columns: repeat(4, 1fr);
+                /* Four cards per row */
+                padding: 100px 100px;
+                /* Reduced padding for medium screens */
             }
-    
+
             .icon {
-                font-size: 36px; /* Smaller icon size */
+                font-size: 36px;
+                /* Smaller icon size */
             }
         }
-    
+
         /* Small Screens: 992px and below */
         @media (max-width: 992px) {
             .features {
-                grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-                padding: 80px 50px; /* Further reduced padding for small screens */
+                grid-template-columns: repeat(3, 1fr);
+                /* Three cards per row */
+                padding: 80px 50px;
+                /* Further reduced padding for small screens */
             }
-    
+
             .icon {
-                font-size: 32px; /* Smaller icon size */
+                font-size: 32px;
+                /* Smaller icon size */
             }
         }
-    
+
         /* Smaller Screens: 768px and below */
         @media (max-width: 768px) {
             .features {
-                grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-                padding: 60px 40px; /* Padding for smaller screens */
+                grid-template-columns: repeat(2, 1fr);
+                /* Two cards per row */
+                padding: 60px 40px;
+                /* Padding for smaller screens */
             }
-    
+
             .feature-card {
-                width: 90%; /* Adjust card width on smaller screens */
-                padding: 30px; /* Adjust padding inside the card */
+                width: 90%;
+                /* Adjust card width on smaller screens */
+                padding: 30px;
+                /* Adjust padding inside the card */
             }
-    
+
             .icon {
-                font-size: 28px; /* Smaller icon size */
+                font-size: 28px;
+                /* Smaller icon size */
             }
         }
-    
+
         /* Extra Small Screens: 480px and below */
         @media (max-width: 480px) {
             .features {
-                grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-                padding: 0px 0px; /* Minimal padding for extra small screens */
+                grid-template-columns: repeat(2, 1fr);
+                /* Two cards per row */
+                padding: 0px 0px;
+                /* Minimal padding for extra small screens */
             }
-    
+
             .feature-card {
-                width: 60%; /* Full width on extra small screens */
+                width: 60%;
+                /* Full width on extra small screens */
                 margin-bottom: 20px;
-                padding: 0px; /* Further adjust padding inside the card */
+                padding: 0px;
+                /* Further adjust padding inside the card */
             }
-    
+
             .icon {
-                font-size: 14px; /* Smaller icon size */
+                font-size: 14px;
+                /* Smaller icon size */
             }
         }
     </style>
-    
+
     <section>
         <div class="features">
             <div class="feature-card">
@@ -1025,6 +1045,35 @@
     </footer>
 
     <!-- footer end  -->
+
+    <!-- WhatsApp floating icon -->
+    <a href="https://wa.me/918595871247" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
 
 </body>
 
