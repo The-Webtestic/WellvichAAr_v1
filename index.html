@@ -28,52 +28,55 @@
             background-color: #f3f1e7;
             overflow-x: hidden;
         }
-    
+
         .nav-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1vw 4vw; /* Adjusted padding */
+            padding: 1vw 4vw;
+            /* Adjusted padding */
             background-color: #f3f1e7;
             color: #126796;
             font-weight: bold;
         }
-    
+
         .nav-container .logo img {
             max-height: 75px;
-            width: auto; /* Ensure logo size is responsive */
+            width: auto;
+            /* Ensure logo size is responsive */
         }
-    
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-    
+
         .nav-links a {
             color: black;
             text-decoration: none;
             padding: 10px;
         }
-    
+
         .nav-links a:hover {
             color: #126796;
         }
-    
+
         .menu-toggle {
             display: none;
             cursor: pointer;
             position: absolute;
             right: 20px;
             top: 20px;
-            z-index: 20; /* Higher than .nav-links */
+            z-index: 20;
+            /* Higher than .nav-links */
         }
-    
+
         .menu-toggle span {
             font-size: 24px;
             color: #126796;
         }
-    
+
         .social-media-links i {
             color: white;
             background-color: #126796;
@@ -81,11 +84,11 @@
             border-radius: 50%;
             font-size: 20px;
         }
-    
+
         .social-media-links a:hover i {
             background-color: #dab968;
         }
-    
+
         .contact-button {
             background-color: #126796;
             padding: 10px 10px;
@@ -95,22 +98,24 @@
             text-decoration: none;
             color: white;
         }
-    
+
         .contact-button:hover {
             background-color: #f3f1e7;
             color: #126796;
             border: solid 1px #126796;
         }
-    
+
         @media (max-width: 768px) {
             .nav-container {
-                padding: 1.5vw 3vw; /* Smaller padding on mobile */
+                padding: 1.5vw 3vw;
+                /* Smaller padding on mobile */
             }
-    
+
             .nav-container .logo img {
-                max-height: 50px; /* Smaller logo for mobile */
+                max-height: 50px;
+                /* Smaller logo for mobile */
             }
-    
+
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -123,7 +128,7 @@
                 left: 0;
                 padding-top: 20px;
             }
-    
+
             .nav-links.active {
                 display: flex;
                 height: 100vh;
@@ -131,23 +136,26 @@
                 top: 0;
                 left: 0;
                 background-color: white;
-                z-index: 15; /* Below .menu-toggle */
+                z-index: 15;
+                /* Below .menu-toggle */
             }
-    
+
             .menu-toggle {
                 display: block;
-                position: fixed; /* Change from absolute to fixed */
+                position: fixed;
+                /* Change from absolute to fixed */
                 right: 20px;
                 top: 20px;
-                z-index: 20; /* Ensures it's above the nav links */
+                z-index: 20;
+                /* Ensures it's above the nav links */
             }
-    
+
             .social-media-links {
                 flex-direction: row;
                 justify-content: center;
                 margin-top: 20px;
             }
-    
+
             .contact-button {
                 display: block;
                 margin-top: 20px;
@@ -155,7 +163,7 @@
             }
         }
     </style>
-    
+
     <nav>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -1638,13 +1646,16 @@
 
 
 
-    <section class="contact-section">
+    <section class="contact-section"
+        style="background-color: #126796; padding: 40px; text-align: center; color: white;">
         <h2 style="font-size: 26px; color: #dab968;">Contact Information.</h2>
         <h1 style="font-size: 36px; color: white;">GET IN TOUCH</h1>
-        <h2>Email: wellvichaar@gmail.Com</h2>
-        <h2 style="margin-bottom: 20px;">Phone: +91 85958 71247</h2>
+        <h2>Email: <a href="mailto:wellvichaar@gmail.com" style="color: white;">wellvichaar@gmail.com</a></h2>
+        <h2 style="margin-bottom: 20px;">Phone: <a href="tel:+918595871247" style="color: white;">+91 85958 71247</a>
+        </h2>
         <a href="counselling.html" class="contact-button">Counselling Start</a>
     </section>
+
 
     <!-- contact us end -->
 
