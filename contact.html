@@ -17,7 +17,6 @@
 
 <body>
     <!-- nav bar start -->
-    <!-- nav bar start -->
     <style>
         body {
             font-family: "Gothic A1", sans-serif;
@@ -46,7 +45,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 20px;
+            /* gap: 20px; */
         }
 
         .nav-links a {
@@ -78,8 +77,9 @@
             color: white;
             background-color: #126796;
             padding: 10px;
+            /* border-radius: 50% solid #126796; */
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .social-media-links a:hover i {
@@ -100,6 +100,18 @@
             background-color: #f3f1e7;
             color: #126796;
             border: solid 1px #126796;
+        }
+
+        #button-nav:hover {
+            background-color: #dab968;
+        }
+
+        #social-media-links a {
+            padding: 5px;
+        }
+
+        #social-media-links {
+            margin: 0px 5px;
         }
 
         @media (max-width: 768px) {
@@ -123,7 +135,7 @@
                 position: absolute;
                 top: 80px;
                 left: 0;
-                padding-top: 20px;
+                padding-top: 150px;
             }
 
             .nav-links.active {
@@ -201,13 +213,13 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
+                <a href="about.html">About</a>
                 <div class="dropdown">
                     <a href="counselling.html#team">Our Team</a>
                 </div>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#specializations">Specializations</a>
-                <div class="social-media-links">
+                <a href="#services">Services</a>
+                <a href="#specializations">Specializations</a>
+                <div class="social-media-links" id="social-media-links">
                     <a href="https://www.facebook.com" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -218,7 +230,8 @@
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
-                <a href="counselling.html" class="contact-button">Counselling Start</a>
+                <a href="counselling.html" style="color: white; " id="button-nav" class="contact-button">Counselling
+                    Start</a>
             </div>
         </div>
     </nav>
