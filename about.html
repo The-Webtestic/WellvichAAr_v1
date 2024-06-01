@@ -247,8 +247,9 @@
             background-position: right;
             background-repeat: no-repeat;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: white;
             padding: 50px 10px;
+            /* Uniform padding */
             overflow: hidden;
         }
 
@@ -258,11 +259,6 @@
             display: flex;
             justify-content: center;
             /* Center align the boxes within the container */
-        }
-
-        .results h2 {
-            font-size: 16px;
-            color: #e7cb80;
         }
 
         .results h1 {
@@ -275,7 +271,8 @@
         .result-boxes {
             background-color: transparent;
             display: flex;
-            justify-content: start;
+            justify-content: center;
+            /* Ensures center alignment */
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
@@ -300,10 +297,10 @@
         }
 
         .result-box:hover {
+            padding: 20px;
+            /* Maintain consistent padding on hover */
             transform: scale(1.05) translateZ(10px);
-            /* Scale and lift effect */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            /* Deeper shadow on hover */
         }
 
         .result-box p {
@@ -339,7 +336,6 @@
             }
         }
     </style>
-
     <section class="results">
         <h1>About Us</h1>
         <!-- <h1>Why Choose Us<span style="color: #dab968;">.</span></h1> -->
@@ -815,13 +811,13 @@
                 <h2 class="sub-title" style="font-size: 26px;">Certified Clinical Mental Health Counselor</h2>
             </div>
             <div class="footer-nav">
-                <a href="#about" style="font-weight: bold;">About us</a>
+                <a href="about.html" style="font-weight: bold;">About us</a>
                 <p>//</p>
                 <a href="counselling.html#team" style="font-weight: bold;">Team</a>
                 <p>//</p>
-                <a href="#specializations" style="font-weight: bold;">Specializations</a>
+                <a href="index.html#specializations" style="font-weight: bold;">Specializations</a>
                 <p>//</p>
-                <a href="#services" style="font-weight: bold;">Services</a>
+                <a href="index.html#services" style="font-weight: bold;">Services</a>
                 <p>//</p>
                 <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
             </div>
