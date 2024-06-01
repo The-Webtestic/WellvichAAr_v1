@@ -451,15 +451,15 @@
                 <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
                 <button class="price-button">INR 1700/-</button>
             </div>
-            <!-- <div class="card">
-                <h2 class="card-title">Know</h2>
+            <div class="card">
+                <h2 class="card-title">Book Your Session</h2>
                 <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 1</p>
                 <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
-                <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 14 days</p>
+                <!-- <p><i class="fa fa-calendar" aria-hidden="true" style="color: #dab968;"></i> Validity: 14 days</p> -->
                 <p><i class="far fa-file-video" style="color: #dab968;"></i> Mode: Audio/Video</p>
-                <button class="price-button">INR 4,500/-</button>
+                <button class="price-button">INR 1,500/-</button>
             </div>
-            <div class="card">
+            <!-- <div class="card">
                 <h2 class="card-title">Empower</h2>
                 <p><i class="fas fa-user" style="color: #dab968;"></i> No. of sessions: 8</p>
                 <p><i class="far fa-clock" style="color: #dab968;"></i> 60 Minutes / Session</p>
@@ -468,6 +468,20 @@
                 <button class="price-button">INR 36,000/-</button>
             </div> -->
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Select all elements with the class 'price-button'
+                const priceButtons = document.querySelectorAll('.price-button');
+                // Add a click event listener to each button
+                priceButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        window.location.href = 'contact.html'; // Redirect to 'contact.html' when clicked
+                    });
+                });
+            });
+        </script>
+
     </section>
 
 
