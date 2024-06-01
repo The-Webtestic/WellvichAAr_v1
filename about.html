@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-WellvichAAr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- nav bar start -->
+    <style>
+        body {
+            font-family: "Gothic A1", sans-serif;
+            margin: 0;
+            background-color: #f3f1e7;
+            overflow-x: hidden;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1vw 4vw;
+            /* Adjusted padding */
+            background-color: #f3f1e7;
+            color: #126796;
+            font-weight: bold;
+        }
+
+        .nav-container .logo img {
+            max-height: 75px;
+            width: auto;
+            /* Ensure logo size is responsive */
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            /* gap: 20px; */
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .nav-links a:hover {
+            color: #126796;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 20;
+            /* Higher than .nav-links */
+        }
+
+        .menu-toggle span {
+            font-size: 24px;
+            color: #126796;
+        }
+
+        .social-media-links i {
+            color: white;
+            background-color: #126796;
+            padding: 10px;
+            /* border-radius: 50% solid #126796; */
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .social-media-links a:hover i {
+            background-color: #dab968;
+        }
+
+        .contact-button {
+            background-color: #126796;
+            padding: 10px 10px;
+            border: 1px solid #126796;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-button:hover {
+            background-color: #f3f1e7;
+            color: #126796;
+            border: solid 1px #126796;
+        }
+
+        #button-nav:hover {
+            background-color: #dab968;
+        }
+
+        #social-media-links a {
+            padding: 5px;
+        }
+
+        #social-media-links {
+            margin: 0px 5px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1.5vw 3vw;
+                /* Smaller padding on mobile */
+            }
+
+            .nav-container .logo img {
+                max-height: 50px;
+                /* Smaller logo for mobile */
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+                background-color: #f3f1e7;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                padding-top: 150px;
+            }
+
+            .nav-links.active {
+                display: flex;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: white;
+                z-index: 15;
+                /* Below .menu-toggle */
+            }
+
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                /* Change from absolute to fixed */
+                right: 20px;
+                top: 20px;
+                z-index: 20;
+                /* Ensures it's above the nav links */
+            }
+
+            .social-media-links {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .contact-button {
+                display: block;
+                margin-top: 20px;
+                width: auto;
+            }
+        }
+    </style>
+
+    <nav>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(".menu-toggle");
+                const navLinks = document.querySelector(".nav-links");
+
+                function toggleNav() {
+                    navLinks.classList.toggle("active");
+                    menuToggle.classList.toggle("active"); // Toggle the style if needed
+                }
+
+                menuToggle.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                    toggleNav();
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuToggle.classList.remove('active'); // Ensure the toggle icon updates
+                    }
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        menuToggle.classList.remove('active'); // Update the toggle icon
+                    });
+                });
+            });
+        </script>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <span>&#9776;</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <div class="dropdown">
+                    <a href="counselling.html#team">Our Team</a>
+                </div>
+                <a href="#services">Services</a>
+                <a href="#specializations">Specializations</a>
+                <div class="social-media-links" id="social-media-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <a href="counselling.html" style="color: white; " id="button-nav" class="contact-button">Counselling
+                    Start</a>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+
+    <!-- OUR RESULTS start -->
+
+    <style>
+        .results {
+            min-height: 400px;
+            background-size: cover;
+            background-image: url("images/Background+Wave+Right.jpg");
+            background-position: right;
+            background-repeat: no-repeat;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px 10px;
+            overflow: hidden;
+        }
+
+        .result-box-container {
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .results h2 {
+            font-size: 16px;
+            color: #e7cb80;
+        }
+
+        .results h1 {
+            font-size: 26px;
+            color: #126796;
+        }
+
+        .result-boxes {
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            /* Allow flex items to wrap to the next line */
+            margin-top: 20px;
+        }
+
+        .result-box {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            border-radius: 8px;
+            border: 1px solid #126796;
+            margin: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .result-box img {
+            width: 100px;
+        }
+
+        .result-box img:hover {
+            transform: scale(1.5);
+            transition: 0.45s;
+        }
+
+        .result-number {
+            font-size: 20px;
+            color: #dab968;
+            font-weight: bold;
+        }
+
+        .result-box h3 {
+            font-style: normal;
+            font-weight: bold;
+            color: #126796;
+        }
+
+        .result-box p {
+            text-align: center;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .result-box a {
+            color: #dab968;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .result-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .result-box {
+                width: 80%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .results h2 {
+                font-size: 14px;
+            }
+
+            .results h1 {
+                font-size: 20px;
+            }
+
+            .result-box {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .result-box img {
+                width: 80px;
+            }
+
+            .result-number {
+                font-size: 18px;
+            }
+
+            .result-box h3 {
+                font-size: 18px;
+            }
+
+            .result-box p {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <section class="results">
+        <h1>About Us</h1>
+        <!-- <h1>Why Choose Us<span style="color: #dab968;">.</span></h1> -->
+
+        <div class="result-box-container">
+            <div class="result-boxes">
+                <div class="result-box">
+                    <p>
+                        Step into a realm where understanding meets transformation, where every challenge is met with
+                        empathy and expertise. Welcome to Well Vichaar, your sanctuary for mental wellness and personal
+                        growth.
+                    </p>
+                </div>
+                <div class="result-box">
+                    <p>
+                        At Well Vichaar, we don't just listen; we guide, empower, and uplift. Led by a compassionate
+                        team of RCI Certified Clinical psychologists, counseling psychologists, and top-tier
+                        psychiatrists, we offer a haven for those seeking clarity, healing, and renewal.
+                    </p>
+                </div>
+                <div class="result-box">
+                    <p>
+                        Our mission is simple yet profound: to help you not only find happiness but also build a life of
+                        deep satisfaction and purpose. Whether you're grappling with grief, wrestling with guilt, or
+                        battling fears and phobias, we're here to support you every step of the way.
+                    </p>
+                </div>
+
+                <div class="result-box">
+                    <p>
+                        Discover the transformative power of positive psychology, hypnotherapy, and evidence-based
+                        therapies tailored to your unique needs. Let us be your partners in growth, your champions of
+                        resilience, and your guides to a brighter, more fulfilling tomorrow.
+                    </p>
+                </div>
+
+                <div class="result-box">
+                    <p>
+                        Take the first step towards a life filled with joy, meaning, and liberation. Choose Well
+                        Vichaar—the right place for your journey to well-being.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- OUR RESULTS end -->
+
+    <!-- start OUR SERVICES -->
+    <style>
+        .services-section {
+            text-align: center;
+            background-color: white;
+            padding: 120px 150px;
+            /* Reduced horizontal padding */
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* Maintain six cards per row on large screens */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            /* Slightly enlarges the card on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Adds shadow for depth */
+        }
+
+        .service-item:hover img {
+            transform: scale(1.1);
+            /* Zooms the image slightly */
+        }
+
+        .service-item {
+            border: 2px solid #c2c2c2;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            /* Sets a fixed height for each service item */
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for all images */
+            object-fit: cover;
+            /* Ensures images cover the area without distorting aspect ratio */
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effects */
+        }
+
+
+        .service-item h2 {
+            background-color: white;
+            margin: 0;
+            color: #126796;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            padding: 10px;
+            /* Padding to ensure text is not flush against the edges */
+        }
+
+
+        @media (max-width: 1200px) {
+            .services-section {
+                padding: 100px 100px;
+                /* Further reduced padding for medium screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+                /* Four cards per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-section {
+                padding: 80px 50px;
+                /* Further reduced padding for small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* Three cards per row */
+            }
+
+            .service-item img {
+                height: 250px;
+                /* Adjusted image height for smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-section {
+                padding: 60px 30px;
+                /* Reduced padding for very small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Two cards per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-section {
+                padding: 40px 5px;
+                /* Minimal padding for extra small screens */
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Adjust to keep two cards in a row */
+            }
+
+            .service-item {
+                height: 150px;
+                /* Adjusted height for smaller screens */
+            }
+        }
+    </style>
+
+
+
+
+    <section class="services-section" id="services">
+        <h2 style="color: #dab968;">Our Services</h2>
+        <h1 style="color: #126796;">How We Can Help You</h1>
+        <a href="counselling.html" style="color:#126796; display: flex; align-items: start; font-weight: bold;">Let's
+            Find Out What Are You Struggling With →</a>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="images/images (1).jpeg" alt="Stress Management">
+                <h2>Stress Management</h2>
+            </div>
+            <div class="service-item">
+                <img src="images/images (2).jpeg" alt="Anxiety Issue">
+                <h2>Anxiety Issue</h2>
+            </div>
+            <div class="service-item">
+                <img src="images/main-qimg-6146ca5230dc65d769c7bc43980ea7e0-lq.jpeg" alt="Relationship Issues">
+                <h2>Relationship Issues</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (10).jpeg" alt="Goal Setting & Manifestation">
+                <h2>Goal Setting & Manifestation</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (9).jpeg" alt="Personal & Professional Growth">
+                <h2>Personal & Professional Growth</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (8).jpeg" alt="Low motivation & Energy">
+                <h2>Low motivation & Energy</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (7).jpeg" alt="Sleep Issues">
+                <h2>Sleep Issues</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (6).jpeg" alt="Emotional Stability">
+                <h2>Emotional Stability</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (11).jpeg" alt="Career Management">
+                <h2>Career Management</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (3).jpeg" alt="Work-Life Balance">
+                <h2>Work-Life Balance</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (5).jpeg" alt="Low Self Esteem and Confidence">
+                <h2>Low Self Esteem and Confidence</h2>
+            </div>
+
+            <div class="service-item">
+                <img src="images/images (4).jpeg" alt="Post Traumatic Stress">
+                <h2>Post Traumatic Stress</h2>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- End OUR SERVICES -->
+
+
+    <!-- footer start -->
+    <style>
+        footer {
+            background-color: #126796;
+            color: #F8BF7D;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        .footer-logo p {
+            margin: 15px 0 20px;
+            font-size: 18px;
+            color: #dab969;
+        }
+
+
+        .footer-nav {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-nav p {
+            margin: 5px;
+            text-decoration: none;
+            color: #dab969;
+        }
+
+        .footer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin: 20px 0;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+        }
+
+        .footer-social svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-bottom p {
+            margin: 10px 0;
+        }
+
+        .footer-bottom a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1 style="font-size: 36px;">WellvichAAr</h1>
+                <h2 class="sub-title" style="font-size: 26px;">Certified Clinical Mental Health Counselor</h2>
+            </div>
+            <div class="footer-nav">
+                <a href="#about" style="font-weight: bold;">About us</a>
+                <p>//</p>
+                <a href="counselling.html#team" style="font-weight: bold;">Team</a>
+                <p>//</p>
+                <a href="#specializations" style="font-weight: bold;">Specializations</a>
+                <p>//</p>
+                <a href="#services" style="font-weight: bold;">Services</a>
+                <p>//</p>
+                <a href="counselling.html" style="font-weight: bold;">Counselling Start</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.892-4.785 4.655-4.785 1.323 0 2.462.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.309h3.588l-.467 3.622h-3.121v9.293h6.116c.731 0 1.324-.593 1.324-1.324v-21.35c0-.732-.593-1.325-1.324-1.325z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.241 1.308 3.607.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.241 1.245-3.607 1.308-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.241-1.308-3.607-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.063-1.366.333-2.633 1.308-3.608.975-.975 2.241-1.245 3.607-1.308 1.265-.058 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.013-4.947.072-1.421.065-2.687.333-3.75 1.396-1.064 1.064-1.331 2.33-1.396 3.75-.059 1.28-.072 1.688-.072 4.947s.013 3.667.072 4.947c.065 1.421.333 2.687 1.396 3.75 1.064 1.064 2.33 1.331 3.75 1.396 1.28.059 1.688.072 4.947.072s3.667-.013 4.947-.072c1.421-.065 2.687-.333 3.75-1.396 1.064-1.064 1.331-2.33 1.396-3.75.059-1.28.072-1.688.072-4.947s-.013-3.667-.072-4.947c-.065-1.421-.333-2.687-1.396-3.75-1.064-1.064-2.33-1.331-3.75-1.396-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.44.644-1.44 1.44s.644 1.44 1.44 1.44 1.44-.644 1.44-1.44-.644-1.44-1.44-1.44z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.723 0-4.932 2.208-4.932 4.93 0 .386.044.763.127 1.124-4.096-.205-7.725-2.167-10.15-5.144-.424.724-.667 1.562-.667 2.457 0 1.694.863 3.188 2.175 4.066-.803-.026-1.56-.246-2.224-.616v.062c0 2.366 1.683 4.343 3.918 4.792-.41.111-.842.171-1.287.171-.315 0-.622-.03-.921-.086.623 1.944 2.432 3.357 4.576 3.395-1.675 1.312-3.784 2.096-6.075 2.096-.394 0-.779-.023-1.161-.068 2.165 1.388 4.735 2.2 7.504 2.2 9.005 0 13.928-7.465 13.928-13.928 0-.212-.004-.423-.014-.634.955-.69 1.784-1.55 2.437-2.532z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a
+                        style="color: #dab968;" onmouseover="this.style.color='white'"
+                        onmouseout="this.style.color='#dab968'"
+                        href="https://www.linkedin.com/company/webtestic1017?originalSubdomain=in">The Webtestic</a>
+                </p>
+                <p style="font-weight: bold;"><a href="privacy-policy.html#privacy">PRIVACY POLICY &bull;</a> <a
+                        href="privacy-policy.html#terms">TERMS AND CONDITIONS</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- WhatsApp floating icon -->
+    <a href="https://wa.me/918595871247" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+        }
+
+        .whatsapp-float img {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+</body>
+
+</html>
