@@ -80,10 +80,10 @@
         .social-media-links i {
             color: white;
             background-color: #126796;
-            padding: 10px;
+            padding: 13px;
             /* border-radius: 50% solid #126796; */
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 15px;
         }
 
         .social-media-links a:hover i {
@@ -303,7 +303,7 @@
 
         .hero-image img {
             padding-top: 60px;
-            width: 70%;
+            width: 54%;
             height: auto;
             margin-bottom: 0;
             /* Ensure no margin is applied */
@@ -314,11 +314,20 @@
             background-color: #126796;
             color: white;
             text-align: center;
-            padding: 20px;
-            width: 64%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            width: 54%;
             margin-top: 0;
             margin-bottom: 25px;
             /* Ensure no top margin */
+        }
+
+        #fo {
+            font-size: 16px;
+        }
+
+        #rozi {
+            font-size: 16px;
         }
 
         @media (max-width: 768px) {
@@ -358,7 +367,7 @@
             }
 
             .hero-image img {
-                width: 77%;
+                width: 70%;
                 margin: 0 auto;
             }
 
@@ -367,13 +376,21 @@
                 margin: 0 auto;
                 /* Center these elements */
             }
+
+            #fo {
+                font-size: 16px;
+            }
+
+            #rozi {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 480px) {
 
             .hero-content h1,
             .hero-content h2 {
-                font-size: 16px;
+                font-size: 10px;
                 /* Adjust if necessary */
                 padding: 0 10px;
                 /* Adjust padding for smaller screens */
@@ -382,7 +399,7 @@
             }
 
             .hero-image img {
-                width: 75%;
+                width: 62%;
                 margin: 0 auto;
             }
 
@@ -399,7 +416,15 @@
             }
 
             .hero-content h2 {
-                font-size: 14px;
+                font-size: 12px;
+            }
+
+            #fo {
+                font-size: 12px;
+            }
+
+            #rozi {
+                font-size: 12px;
             }
         }
     </style>
@@ -417,19 +442,19 @@
         </div>
         <div class="hero-image">
             <img src="images/rozi.jpg" alt="Rozi's Image" class="rozi-image">
-            <div class="rozi-name" style="text-align: center;">
-                <h1 style="color: white;">Meet Miss. Rozi</h1>
-                <h2 style="color: #dab968;">Founder and CEO of WellvichAAr</h2>
+            <div class="rozi-name" id="ro" style="text-align: center;">
+                <h1 style="color: white;" id="rozi">Meet Miss. Rozi</h1>
+                <h2 style="color: #dab968;" id="fo">Founder and CEO of WellvichAAr</h2>
                 <a href="https://www.facebook.com" target="_blank"
-                    style="color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 100%; transition: background-color 0.3s, color 0.3s;">
+                    style="font-size: 12px; color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 50%; transition: background-color 0.3s, color 0.3s;">
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="https://www.instagram.com" target="_blank"
-                    style="color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 100%; transition: background-color 0.3s, color 0.3s;">
+                    style="font-size: 12px; color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 50%; transition: background-color 0.3s, color 0.3s;">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com" target="_blank"
-                    style="color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 100%; transition: background-color 0.3s, color 0.3s;">
+                    style="font-size: 12px; color: white; display: inline-block; background-color: transparent; border: 1px solid white; padding: 10px; border-radius: 50%; transition: background-color 0.3s, color 0.3s;">
                     <i class="fab fa-linkedin"></i>
                 </a>
 
@@ -984,7 +1009,7 @@
 
         .service-item img {
             width: 100%;
-            height: 200px;
+            height: 150px;
             /* Fixed height for all images */
             object-fit: cover;
             /* Ensures images cover the area without distorting aspect ratio */
@@ -992,18 +1017,14 @@
             /* Smooth transition for hover effects */
         }
 
-
         .service-item h2 {
             background-color: white;
             margin: 0;
             color: #126796;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            padding: 10px;
-            /* Padding to ensure text is not flush against the edges */
+            font-size: 14px;
+            /* Adjust the font size as needed */
+            padding: 5px;
+            /* Adjust the padding as needed */
         }
 
 
