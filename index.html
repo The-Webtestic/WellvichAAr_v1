@@ -80,10 +80,20 @@
         .social-media-links i {
             color: white;
             background-color: #126796;
-            padding: 13px;
-            /* border-radius: 50% solid #126796; */
+            padding: 10px;
+            /* Adjust this value so it forms a square if necessary */
             border-radius: 50%;
-            font-size: 15px;
+            /* This should make the background perfectly circular */
+            font-size: 16px;
+            /* Adjust font size as needed */
+            display: inline-flex;
+            /* Helps center the icon and maintain the aspect ratio */
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            /* Ensuring the width is the same as height */
+            height: 30px;
+            /* Ensuring the height is the same as width */
         }
 
         .social-media-links a:hover i {

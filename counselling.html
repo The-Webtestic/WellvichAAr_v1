@@ -15,8 +15,8 @@
 </head>
 
 <body>
-     <!-- nav bar start -->
-     <style>
+    <!-- nav bar start -->
+    <style>
         body {
             font-family: "Gothic A1", sans-serif;
             margin: 0;
@@ -75,11 +75,22 @@
         .social-media-links i {
             color: white;
             background-color: #126796;
-            padding: 13px;
-            /* border-radius: 50% solid #126796; */
+            padding: 10px;
+            /* Adjust this value so it forms a square if necessary */
             border-radius: 50%;
-            font-size: 15px;
+            /* This should make the background perfectly circular */
+            font-size: 16px;
+            /* Adjust font size as needed */
+            display: inline-flex;
+            /* Helps center the icon and maintain the aspect ratio */
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            /* Ensuring the width is the same as height */
+            height: 30px;
+            /* Ensuring the height is the same as width */
         }
+
 
         .social-media-links a:hover i {
             background-color: #dab968;
@@ -227,7 +238,7 @@
                     </a>
                     <a href="https://www.linkedin.com" target="_blank">
                         <i class="fab fa-linkedin"></i>
-                    </a>                    
+                    </a>
                 </div>
                 <a href="counselling.html" style="color: white; " id="button-nav" class="contact-button">Counselling
                     Start</a>
@@ -978,9 +989,10 @@
                 </a>
                 <a href="https://www.linkedin.com" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-                        <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zm-9.5 19h-3V9h3v10zm-1.5-11.5h-.03c-1 0-1.67-.74-1.67-1.66 0-.95.7-1.67 1.76-1.67s1.67.72 1.7 1.67c0 .92-.67 1.66-1.76 1.66zM20 19h-3v-5.6c0-1.34-.48-2.25-1.66-2.25-.91 0-1.45.62-1.69 1.22-.09.21-.11.5-.11.79V19h-3s.04-9 0-10h3v1.42c.4-.62 1.11-1.5 2.69-1.5 1.97 0 3.47 1.3 3.47 4.08V19z"/>
+                        <path
+                            d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zm-9.5 19h-3V9h3v10zm-1.5-11.5h-.03c-1 0-1.67-.74-1.67-1.66 0-.95.7-1.67 1.76-1.67s1.67.72 1.7 1.67c0 .92-.67 1.66-1.76 1.66zM20 19h-3v-5.6c0-1.34-.48-2.25-1.66-2.25-.91 0-1.45.62-1.69 1.22-.09.21-.11.5-.11.79V19h-3s.04-9 0-10h3v1.42c.4-.62 1.11-1.5 2.69-1.5 1.97 0 3.47 1.3 3.47 4.08V19z" />
                     </svg>
-                </a>                
+                </a>
             </div>
             <div class="footer-bottom">
                 <p style="font-weight: bold;">&copy; 2024 WellvichAAr All Rights Reserved.Design By <a
